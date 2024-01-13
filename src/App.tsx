@@ -1,35 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import useLocalStorage from 'use-local-storage';
+import './App.css';
+import { ThemeProvider } from './context/ThemeContext';
+import Router from './pages/Router';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const defaultTheme = window.matchMedia('(prefers-color-scheme: dark').matches;
+  const [dark, setDark] = useLocalStorage<boolean>('isDark', defaultTheme);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <ThemeProvider value={{ dark, setDark }}>
+      <div id={dark ? 'dark' : 'light'}>
+        <Router />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
