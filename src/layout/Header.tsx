@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import s from './Header.module.css';
 import ThemeSwitch from 'src/components/ThemeSwitch/ThemeSwitch';
+import LangSelect from 'src/components/LangSelect/LangSelect';
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
         <NavLink to={'projects'}>Projects</NavLink>
         <NavLink to={'contact'}>Contact</NavLink>
         <ThemeSwitch />
+        <LangSelect />
       </nav>
     </header>
   );

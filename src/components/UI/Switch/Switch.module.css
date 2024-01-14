@@ -1,5 +1,5 @@
 .switch {
-  --switch-width: 2.2rem;
+  --switch-width: 3rem;
   --switch-height: 1.5rem;
   --color-2: var(--color-dark-normal);
   --color-1: var(--color-light-extra);

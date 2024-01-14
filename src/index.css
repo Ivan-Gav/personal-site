@@ -21,15 +21,19 @@
 #light {
   --color-text: var(--color-dark-normal);
   --color-bg: var(--color-light-extra);
+  background-color: var(--color-bg);
 }
 
 #dark {
   --color-text: var(--color-light-extra);
   --color-bg: var(--color-dark-normal);
+  background-color: var(--color-bg);
 }
 
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
