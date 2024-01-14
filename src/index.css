@@ -2,23 +2,30 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
+
+  --color-light-extra: #F8F9FA;
+  --color-light-normal: #DEE2E6;
+  --color-light-low: #ADB5BD;
+  --color-dark-low: #6C757D;
+  --color-dark-normal: #343A40;
+  --color-dark-extra: #212529;
 }
 
 #light {
-  --color-text: #da0098;
-  --color-bg: #fff;
+  --color-text: var(--color-dark-normal);
+  --color-bg: var(--color-light-extra);
 }
 
 #dark {
-  --color-text: rgba(255, 255, 255, 0.87);
-  --color-bg: #003d45;
+  --color-text: var(--color-light-extra);
+  --color-bg: var(--color-dark-normal);
 }
 
 
