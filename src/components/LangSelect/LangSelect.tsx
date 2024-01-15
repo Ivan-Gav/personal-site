@@ -1,17 +1,36 @@
+import { useTranslation } from 'react-i18next';
+
 import Select from '../UI/Select/Select';
 
-export default function LangSelect() {
-  const languages = ['RU', 'EN', 'DE'];
+const languages = [
+  {
+    optionName: 'РУ',
+    optionValue: 'ru',
+  },
+  {
+    optionName: 'EN',
+    optionValue: 'en',
+  },
+  {
+    optionName: 'DE',
+    optionValue: 'de',
+  },
+];
 
-  const handleLang = (e: React.FormEvent<HTMLSelectElement>) =>
-    console.log(e.currentTarget.value);
+export default function LangSelect() {
+  const { i18n } = useTranslation();
+
+  const handleLang = (e: React.FormEvent<HTMLSelectElement>) => {
+    const selectedLang = e.currentTarget.value;
+    i18n.changeLanguage(selectedLang);
+  };
 
   return (
     <Select
       title="Lang"
       options={languages}
       onChange={handleLang}
-      initial="EN"
+      initial={i18n.language}
     />
   );
 }
