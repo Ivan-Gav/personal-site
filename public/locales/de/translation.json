@@ -2,5 +2,7 @@
   "HOME": "Home",
   "CV": "Lebenslauf",
   "PROJECTS": "Portfolio",
-  "CONTACT": "Kontakt"
+  "CONTACT": "Kontakt",
+  "SWITCH_THEME": "Darkmodus",
+  "LANG": "Sprache"
 }

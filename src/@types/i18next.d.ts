@@ -1,4 +1,4 @@
-import text_en from 'src/i18n/locales/en/translation.json';
+import text_en from 'public/locales/en/translation.json';
 
 // const resources = { text_en };
 

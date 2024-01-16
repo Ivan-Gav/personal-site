@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from 'src/layout/RootLayout';
 import Page404 from './404/404';
+import CV from './CV/CV';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'cv',
-        element: <h1>My CV</h1>,
+        element: <CV />,
       },
       {
         path: 'projects',

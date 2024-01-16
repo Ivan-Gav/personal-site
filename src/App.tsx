@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
 import useLocalStorage from 'use-local-storage';
 import 'src/i18n/i18n';
 import './App.css';
@@ -10,13 +11,15 @@ function App() {
   const [dark, setDark] = useLocalStorage<boolean>('isDark', defaultTheme);
 
   return (
-    <Suspense fallback={<h1>Loading..</h1>}>
-      <ThemeProvider value={{ dark, setDark }}>
-        <div id={dark ? 'dark' : 'light'}>
-          <Router />
-        </div>
-      </ThemeProvider>
-    </Suspense>
+    <ErrorBoundary fallback={<h1>Something went wrong</h1>}>
+      <Suspense fallback={<h1>Loading..</h1>}>
+        <ThemeProvider value={{ dark, setDark }}>
+          <div id={dark ? 'dark' : 'light'} className="app_container">
+            <Router />
+          </div>
+        </ThemeProvider>
+      </Suspense>
+    </ErrorBoundary>
   );
 }
 

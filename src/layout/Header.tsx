@@ -1,24 +1,31 @@
-import 'src/i18n/i18n';
-import { NavLink } from 'react-router-dom';
+// import { HeaderLink } from 'react-router-dom';
+import HeaderLink from 'src/components/UI/HeaderLink/HeaderLink';
 import { useTranslation } from 'react-i18next';
 
 import s from './Header.module.css';
 import ThemeSwitch from 'src/components/ThemeSwitch/ThemeSwitch';
 import LangSelect from 'src/components/LangSelect/LangSelect';
+import Home from 'src/assets/icons/home.svg?react';
 
 export default function Header() {
   const { t } = useTranslation();
 
   return (
-    <header>
+    <header className={s.header}>
+      <div className={s.home_link}>
+        <HeaderLink to={'/'} title={t('HOME')}>
+          <Home />
+        </HeaderLink>
+      </div>
       <nav className={s.nav}>
-        <NavLink to={'/'}>{t('HOME')}</NavLink>
-        <NavLink to={'cv'}>{t('CV')}</NavLink>
-        <NavLink to={'projects'}>{t('PROJECTS')}</NavLink>
-        <NavLink to={'contact'}>{t('CONTACT')}</NavLink>
+        <HeaderLink to={'cv'}>{t('CV')}</HeaderLink>
+        <HeaderLink to={'projects'}>{t('PROJECTS')}</HeaderLink>
+        <HeaderLink to={'contact'}>{t('CONTACT')}</HeaderLink>
+      </nav>
+      <div className={s.side_controls}>
         <ThemeSwitch />
         <LangSelect />
-      </nav>
+      </div>
     </header>
   );
 }

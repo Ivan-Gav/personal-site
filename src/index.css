@@ -1,7 +1,6 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: 'Montserrat', Helvetica, Arial, Inter, system-ui, sans-serif;
+  font-weight: 500;
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -9,6 +8,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
+  /* https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08 */
 
   --color-light-extra: #F8F9FA;
   --color-light-normal: #DEE2E6;
@@ -16,20 +16,18 @@
   --color-dark-low: #6C757D;
   --color-dark-normal: #343A40;
   --color-dark-extra: #212529;
-}
 
-#light {
-  --color-text: var(--color-dark-normal);
-  --color-bg: var(--color-light-extra);
-  background-color: var(--color-bg);
-}
+  --color-accent-light-extra: #F48C06;
+  --color-accent-light-normal: #E85D04;
+  --color-accent-light-low: #DC2F02;
+  --color-accent-dark-low: #E85D04;
+  --color-accent-dark-normal: #DC2F02;
+  --color-accent-dark-extra: #D00000;
 
-#dark {
-  --color-text: var(--color-light-extra);
-  --color-bg: var(--color-dark-normal);
-  background-color: var(--color-bg);
+  
+  width: 100%;
+  height: 100%;
 }
-
 
 *,
 *::before,
@@ -40,14 +38,4 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-header, main, footer {
-  color: var(--color-text);
-  background-color: var(--color-bg);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }

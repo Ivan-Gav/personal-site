@@ -2,7 +2,8 @@
   --switch-width: 3rem;
   --switch-height: 1.5rem;
   --color-2: var(--color-dark-normal);
-  --color-1: var(--color-light-extra);
+  --color-1: var(--color-light-normal);
+  --color-3: var(--color-active);
 }
 
 .switch_input {
@@ -22,10 +23,23 @@
   transition: ease-in 0.3s;
 }
 
+.switch_box:hover {
+  border-color: var(--color-3);
+}
+
+/* .switch_box:hover .switch_off,
+.switch_box:hover .switch_on {
+  background-color: var(--color-3);
+} */
+
 .switch input[type="checkbox"]:checked ~ .switch_box {
   background-color: var(--color-2);
   border-color: var(--color-1);
   transition: ease-in 0.3s;
+}
+
+.switch input[type="checkbox"]:checked ~ .switch_box:hover {
+  border-color: var(--color-3);
 }
 
 .switch_off,

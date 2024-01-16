@@ -18,7 +18,7 @@ const languages = [
 ];
 
 export default function LangSelect() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const handleLang = (e: React.FormEvent<HTMLSelectElement>) => {
     const selectedLang = e.currentTarget.value;
@@ -27,7 +27,7 @@ export default function LangSelect() {
 
   return (
     <Select
-      title="Lang"
+      title={t('LANG')}
       options={languages}
       onChange={handleLang}
       initial={i18n.language}

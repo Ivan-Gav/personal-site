@@ -2,5 +2,7 @@
   "HOME": "Home",
   "CV": "CV",
   "PROJECTS": "Portfolio",
-  "CONTACT": "Contact"
+  "CONTACT": "Contact",
+  "SWITCH_THEME": "Theme",
+  "LANG": "Language"
 }
