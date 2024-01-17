@@ -12,6 +12,7 @@ import LangSelect from 'src/components/LangSelect/LangSelect';
 import Home from 'src/assets/icons/home.svg?react';
 import Burger from 'src/components/UI/Burger/Burger';
 import Drawer from 'src/components/UI/Drawer/Drawer';
+import { useScrollLock } from 'src/hooks/useScrollLock';
 
 export default function Header() {
   const [ref, inView] = useInView();
@@ -38,19 +39,30 @@ export default function Header() {
   function TabletNav() {
     const [active, setActive] = useState(false);
     const location = useLocation();
+    const { lockScroll, unlockScroll } = useScrollLock();
 
     const onBurgerClick = () => setActive((prev) => !prev);
     const onOverlayClick = (e: React.MouseEvent) => {
       e.preventDefault();
+      if (!active) {
+        return;
+      }
       if (e.target === e.currentTarget) {
         setActive(false);
       }
-      console.log(e.target);
     };
 
     useEffect(() => {
       setActive(false);
     }, [location.pathname]);
+
+    useEffect(() => {
+      if (active) {
+        lockScroll();
+      } else {
+        unlockScroll();
+      }
+    }, [active, lockScroll, unlockScroll]);
 
     return (
       <>

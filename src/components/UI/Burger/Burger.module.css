@@ -1,4 +1,4 @@
-.burger{
+.burger {
   display: flex;
   position: relative;
   z-index: 50;
@@ -12,7 +12,7 @@
   padding: 0;
 }
 
-.burger_span{
+.burger_span {
   height: 3px;
   width: 100%;
   transform: scale(1);
@@ -20,7 +20,8 @@
   transition: all 0.3s ease 0s;
 }
 
-.burger::before, .burger::after{
+.burger::before,
+.burger::after {
   content: '';
   position: absolute;
   height: 3px;
@@ -35,18 +36,31 @@
   background-color: var(--color-active);
 }
 
-.burger::before { top: 0 }
-
-.burger::after { bottom: 0 }
-
-.burger.active .burger_span { transform: scale(0) }
-
-.burger.active::before{
-    top: 50%;
-    transform: rotate(-45deg) translate(0, -50%);
+.burger::before {
+  top: 0;
 }
 
-.burger.active::after{
-    bottom: 50%;
-    transform: rotate(45deg) translate(0, 50%);
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active .burger_span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+.burger:focus,
+.burger:focus-visible,
+.burger:focus-within {
+  outline: none;
+  background-color: initial;
 }
