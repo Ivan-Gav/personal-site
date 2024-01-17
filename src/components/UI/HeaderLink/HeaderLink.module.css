@@ -1,5 +1,6 @@
 .navlink {
   color: var(--color-text);
+  width: fit-content;
   border-block: solid 2px transparent;
   text-transform: uppercase;
   font-weight: 600;
