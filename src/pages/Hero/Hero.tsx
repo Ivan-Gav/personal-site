@@ -15,12 +15,12 @@ export default function Hero() {
 
   return (
     <section className={cn(s.hero, device === 'mobile' && s.mobile)}>
+      <h2 className={s.hero_title}>
+        <span className={s.hero_name}>{t('IG')} </span>
+        <br />
+        <span className={s.hero_position}>{t('FRONTEND_DEVELOPER')}</span>
+      </h2>
       <div className={s.hero_text}>
-        <h2 className={s.hero_title}>
-          <span className={s.hero_name}>{t('IG')} </span>
-          <br />
-          <span className={s.hero_position}>{t('FRONTEND_DEVELOPER')}</span>
-        </h2>
         <p className={s.hero_slogan}>{t('HERO_SUBTITLE')}</p>
         <p>{t('HERO_MY_STACK')}</p>
         <ul>
