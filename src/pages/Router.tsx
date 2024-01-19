@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from 'src/layout/RootLayout';
 import Page404 from './404/404';
 import CV from './CV/CV';
+import Hero from './Hero/Hero';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <h1>Hi, I&apos;m Ivan</h1>,
+        element: <Hero />,
       },
       {
         path: 'cv',

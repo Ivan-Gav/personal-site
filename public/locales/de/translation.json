@@ -4,5 +4,10 @@
   "PROJECTS": "Portfolio",
   "CONTACT": "Kontakt",
   "SWITCH_THEME": "Darkmodus",
-  "LANG": "Sprache"
+  "LANG": "Sprache",
+  "IG": "Ivan Gavrilin",
+  "FRONTEND_DEVELOPER": "Frontend Entwickler",
+  "HERO_SUBTITLE": "Erschaffen wir etwas Tolles zusammen!",
+  "HERO_MY_STACK": "Mein Tech-Stack in Kürze:",
+  "HERO_CTA": "Lebenslauf"
 }

@@ -1,8 +1,13 @@
 {
   "HOME": "Home",
-  "CV": "CV",
+  "CV": "Resume",
   "PROJECTS": "Portfolio",
   "CONTACT": "Contact",
   "SWITCH_THEME": "Theme",
-  "LANG": "Language"
+  "LANG": "Language",
+  "IG": "Ivan Gavrilin",
+  "FRONTEND_DEVELOPER": "Frontend developer",
+  "HERO_SUBTITLE": "Let's make something amazing together!",
+  "HERO_MY_STACK": "My tech stack in brief:",
+  "HERO_CTA": "Resume"
 }

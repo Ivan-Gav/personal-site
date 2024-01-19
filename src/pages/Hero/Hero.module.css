@@ -1,0 +1,55 @@
+.hero {
+  min-height: calc(100dvh - var(--header-height) - var(--footer-height));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
+  font-size: clamp(1rem, 1.6vw, 1.8rem);
+}
+
+.hero.mobile {
+  flex-direction: column-reverse;
+}
+
+.hero_text {
+  position: relative;
+  z-index: 1;
+  left: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero.mobile .hero_text {
+  left: 0;
+}
+
+.hero_title {
+  font-family: 'Rubik';
+  font-size: clamp(2rem, 4.2vw , 4rem);
+  margin: 0;
+}
+
+.hero_position {
+  color: var(--color-active);
+}
+
+.hero_pic {
+  position: relative;
+  left: -50px;
+  z-index: 0;
+  min-width: 30cqw;
+  aspect-ratio: 3 / 4;
+  background-color: blueviolet;
+}
+
+.hero.mobile .hero_pic {
+  left: 0;
+  min-width: 100%;
+}
+
+.hero.mobile button {
+  margin: auto;;
+}
