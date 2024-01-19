@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
+import { useNavigate } from 'react-router-dom';
 import cn from 'classnames';
 import s from './Hero.module.css';
 import Btn from 'src/components/UI/Btn/Btn';
-import { useNavigate } from 'react-router-dom';
+import Photo from 'src/components/Photo/Photo';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -25,9 +26,10 @@ export default function Hero() {
         <ul>
           <li>React, Redux, Next JS</li>
           <li>JavaScript, TypeScript</li>
-          <li>HTML/CSS, SCSS/SASS, Responsive design</li>
+          <li>HTML/CSS, SCSS/SASS</li>
+          <li>Responsive design</li>
           <li>RESTful API, GraphQL</li>
-          <li>Unit Testing, Vitest, React Testing Library</li>
+          <li>Unit Testing</li>
           <li>Webpack, Vite</li>
         </ul>
 
@@ -35,7 +37,9 @@ export default function Hero() {
           {t('HERO_CTA')}
         </Btn>
       </div>
-      <div className={s.hero_pic}></div>
+      <div className={s.hero_pic}>
+        <Photo />
+      </div>
     </section>
   );
 }

@@ -40,9 +40,7 @@
   position: relative;
   left: -50px;
   z-index: 0;
-  min-width: 30cqw;
-  aspect-ratio: 3 / 4;
-  background-color: blueviolet;
+  width: 30cqw;
 }
 
 .hero.mobile .hero_pic {
