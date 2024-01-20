@@ -1,19 +1,24 @@
 import { useTranslation } from 'react-i18next';
+import cn from 'classnames';
 import s from './Card.module.css';
+import { IconKeysType } from 'src/assets/icons/index';
+import Skill from '../Skill/Skill';
 
 type CardProps = {
-  fromDate: string;
-  toDate: string;
+  isProfile?: boolean;
+  fromDate?: string;
+  toDate?: string;
   company: string;
   position: string;
   location?: string;
   description: React.ReactNode | string;
-  skills?: (React.ReactNode | string)[];
+  skills?: { skill: string; icon?: IconKeysType }[];
   link?: { href: string; text: string };
 };
 
 export default function Card(props: CardProps) {
   const {
+    isProfile,
     fromDate,
     toDate,
     company,
@@ -27,12 +32,14 @@ export default function Card(props: CardProps) {
   const { t } = useTranslation();
 
   return (
-    <div className={s.card}>
-      <div className={s.card_dates}>
-        {fromDate}
-        {' - '}
-        {toDate}
-      </div>
+    <div className={cn(s.card, isProfile && s.profile)}>
+      {!!fromDate && !!toDate && (
+        <div className={s.card_dates}>
+          {fromDate}
+          {' - '}
+          {toDate}
+        </div>
+      )}
       <div className={s.card_title}>
         <h4 className={s.card_company}>{company}</h4>
         {!!location && (
@@ -43,16 +50,21 @@ export default function Card(props: CardProps) {
           </span>
         )}
       </div>
-      <div className={s.card_position}>{position}</div>
-      <div className={s.card_description}>{description}</div>
-      {!!skills && (
+      <h4 className={s.card_position}>{position}</h4>
+      <p className={s.card_description}>{description}</p>
+      {!!skills?.length && (
         <>
           <h5 className={s.card_skills_title}>{t('SKILLS')}</h5>
           <ul className={s.card_skills_list}>
             {skills.map((skill) => (
-              <li className={s.card_skill} key={`${company}-${skill}`}>
-                {skill}
-              </li>
+              <Skill
+                skill={skill.skill}
+                icon={skill.icon}
+                key={`${company}-${skill.skill}`}
+              />
+              // <li className={s.card_skill} key={`${company}-${skill}`}>
+              //   {skill}
+              // </li>
             ))}
           </ul>
         </>

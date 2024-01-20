@@ -1,5 +1,6 @@
 #light {
   --color-text: var(--color-dark-normal);
+  --color-bg-light: var(--color-light-extra);
   --color-bg: var(--color-light-normal);
   --color-bg-shadow: var(--color-light-low);
   --color-accent: var(--color-accent-dark-normal);
@@ -10,6 +11,7 @@
 
 #dark {
   --color-text: var(--color-light-normal);
+  --color-bg-light: var(--color-dark-extra);
   --color-bg: var(--color-dark-normal);
   --color-bg-shadow: var(--color-dark-extra);
   --color-accent: var(--color-accent-light-normal);

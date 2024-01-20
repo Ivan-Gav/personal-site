@@ -10,6 +10,8 @@ function App() {
   const defaultTheme = window.matchMedia('(prefers-color-scheme: dark').matches;
   const [dark, setDark] = useLocalStorage<boolean>('isDark', defaultTheme);
 
+  document.body.style.scrollbarGutter = 'stable';
+
   return (
     <ErrorBoundary fallback={<h1>Something went wrong</h1>}>
       <Suspense fallback={<h1>Loading..</h1>}>

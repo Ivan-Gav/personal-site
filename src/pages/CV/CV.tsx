@@ -1,8 +1,7 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import cn from 'classnames';
 import s from './CV.module.css';
-
 import Card from 'src/components/UI/Card/Card';
 
 export default function CV() {
@@ -11,9 +10,31 @@ export default function CV() {
 
   return (
     <section className={s.cv}>
-      {/* <h2>{t('CV')}</h2> */}
       <div className={cn(s.cv_box, device === 'mobile' && s.mobile)}>
         <div className={s.cv_exp}>
+          <h3 className={s.cv_exp_title}>{t('PROFILE')}</h3>
+          <Card
+            isProfile
+            company={t('IG')}
+            position={t('FRONTEND_DEVELOPER')}
+            description={<Trans i18nKey="PROFILE_DESCRIPTION" />}
+            skills={[
+              { skill: 'React', icon: 'REACT' },
+              { skill: 'Redux', icon: 'REDUX' },
+              { skill: 'Material UI', icon: 'MUI' },
+              { skill: 'GraphQL', icon: 'GRAPHQL' },
+              { skill: 'JavaScript', icon: 'JS' },
+              { skill: 'TypeScript', icon: 'TS' },
+              { skill: 'Git', icon: 'GIT' },
+              { skill: 'GitHub', icon: 'GITHUB' },
+              { skill: 'Webpack', icon: 'WEBPACK' },
+              { skill: 'Vite', icon: 'VITE' },
+              { skill: 'Vitest', icon: 'VITEST' },
+              { skill: 'HTML', icon: 'HTML' },
+              { skill: 'CSS', icon: 'CSS' },
+              { skill: 'SCSS', icon: 'SCSS' },
+            ]}
+          />
           <h3 className={s.cv_exp_title}>{t('EXPERIENCE')}</h3>
           <Card
             fromDate="2012"
@@ -22,7 +43,11 @@ export default function CV() {
             location={t('MOSCOW')}
             position={t('IP')}
             description={t('IP_DESCRIPTION')}
-            skills={['HTML', 'CSS', 'openCart']}
+            skills={[
+              { skill: 'HTML', icon: 'HTML' },
+              { skill: 'CSS', icon: 'CSS' },
+              { skill: 'openCart', icon: 'OPENCART' },
+            ]}
           />
           <Card
             fromDate="2000"
@@ -31,7 +56,10 @@ export default function CV() {
             location={t('MOSCOW')}
             position={t('OSKO_POSITION')}
             description={t('OSKO_DESCRIPTION')}
-            skills={[t('SKILLS_SALES'), t('SKILLS_MANAGEMENT')]}
+            skills={[
+              { skill: t('SKILLS_SALES') },
+              { skill: t('SKILLS_MANAGEMENT') },
+            ]}
           />
         </div>
         <div className={s.cv_edu}>
@@ -41,17 +69,17 @@ export default function CV() {
             toDate="01.2024"
             company="Rolling Scopes School"
             position={t('FRONTEND_DEVELOPER')}
-            description={t('RSS_DESCRIPTION_REACT')}
+            description={<Trans i18nKey="RSS_DESCRIPTION_REACT" />}
             skills={[
-              'React',
-              'Redux',
-              'Material UI',
-              'GraphQL',
-              'JavaScript',
-              'TypeScript',
-              'Git',
-              'Vite',
-              'Vitest',
+              { skill: 'React', icon: 'REACT' },
+              { skill: 'Redux', icon: 'REDUX' },
+              { skill: 'Material UI', icon: 'MUI' },
+              { skill: 'GraphQL', icon: 'GRAPHQL' },
+              { skill: 'JavaScript', icon: 'JS' },
+              { skill: 'TypeScript', icon: 'TS' },
+              { skill: 'Git', icon: 'GIT' },
+              { skill: 'Vite', icon: 'VITE' },
+              { skill: 'Vitest', icon: 'VITEST' },
             ]}
             link={{
               href: 'https://app.rs.school/certificate/gd6t14w7',
@@ -63,18 +91,18 @@ export default function CV() {
             toDate="10.2023"
             company="Rolling Scopes School"
             position={t('FRONTEND_DEVELOPER')}
-            description={t('RSS_DESCRIPTION_JS')}
+            description={<Trans i18nKey="RSS_DESCRIPTION_JS" />}
             skills={[
-              'JavaScript',
-              'Git',
-              'React',
-              'TypeScript',
-              'Webpack',
-              'Vite',
-              'Vitest',
-              'SCSS',
-              'HTML',
-              'CSS',
+              { skill: 'JavaScript', icon: 'JS' },
+              { skill: 'TypeScript', icon: 'TS' },
+              { skill: 'Git', icon: 'GIT' },
+              { skill: 'React', icon: 'REACT' },
+              { skill: 'Webpack', icon: 'WEBPACK' },
+              { skill: 'Vite', icon: 'VITE' },
+              { skill: 'Vitest', icon: 'VITEST' },
+              { skill: 'SCSS', icon: 'SCSS' },
+              { skill: 'HTML', icon: 'HTML' },
+              { skill: 'CSS', icon: 'CSS' },
             ]}
             link={{
               href: 'https://app.rs.school/certificate/e1mh0dpb',

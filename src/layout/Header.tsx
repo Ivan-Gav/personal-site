@@ -87,7 +87,7 @@ export default function Header() {
     <>
       <div ref={ref} className={s.top} />
       <header className={cn(s.header, !inView && s.sticky)}>
-        {device === 'desktop' ? <DesktopNav /> : <TabletNav />}
+        {!(device === 'mobile') ? <DesktopNav /> : <TabletNav />}
         <div className={s.side_controls}>
           <ThemeSwitch />
           <LangSelect />

@@ -14,9 +14,9 @@
   aspect-ratio: 1/1;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 100vw 100vw 0 0;
-  border: 10px solid var(--color-text);
+  border: clamp(4px, 1.4cqw, 10px) solid var(--color-text);
 }
 
 .photo_frame::after {
@@ -29,7 +29,7 @@
   background-color: transparent;
   border-bottom-left-radius: 100vw;
   border-bottom-right-radius: 100vw;
-  border: 10px solid var(--color-text);
+  border: clamp(4px, 1.4cqw, 10px) solid var(--color-text);
   border-top: none;
 }
 
