@@ -38,12 +38,12 @@
   "STACK": "Stack",
   "SITE": "Seite",
   "PROJECT_DESCRIPTION_FOL": "Dieser Online-Shop für Teich- und Springbrunnentechnik wurde auf der Basis des OpenCart CMS und einer fertigen Vorlage erstellt. Die Produktpalette umfasst mehr als 2000 Waren.",
-  "PROJECT_DESCRIPTION_GRAPHIQL": "Der Online-Editor für GraphQL-Abfragen wurde auf React erstellt. Die Funktionalität umfasst die Autorisierung, eine zweisprachige Schnittstelle, die Möglichkeit, eine beliebige GraphQL-API auszuwählen, die interaktive Dokumentation herunterzuladen, Abfragen zu senden und Serverantworten anzuzeigen.",
-  "PROJECT_DESCRIPTION_SHELTER": "Die adaptive zweiseitige Website eines Tierheims ist in JavaScript und CSS geschaffen. Es enthält einen Slider und eine Paginierung mit sofortiger Zufallsgenerierung von Inhalten. Die Aufgabe umfasste auch die pixelgenaue Umsetzung des bereitgestellten Designs.",
-  "PROJECT_DESCRIPTION_SKATESHOP": "Die E-Commerce-Webanwendung, basierend auf React und dem commercetools Cloud-Backend, wurde von einem Team von 3 Entwicklern erstellt, in dem ich tätig war.",
+  "PROJECT_DESCRIPTION_GRAPHIQL": "Der Online-Editor für <strong>GraphQL</strong>-Abfragen wurde auf <strong>React</strong> erstellt. Die Funktionalität umfasst die Autorisierung, eine zweisprachige Schnittstelle, die Möglichkeit, eine beliebige GraphQL-API auszuwählen, die interaktive Dokumentation herunterzuladen, Abfragen zu senden und Serverantworten anzuzeigen.",
+  "PROJECT_DESCRIPTION_SHELTER": "Die adaptive zweiseitige Website eines Tierheims ist in JavaScript und CSS geschaffen. Es enthält einen Slider und eine Paginierung mit sofortiger Zufallsgenerierung von Inhalten. Die Aufgabe umfasste auch die <strong>pixelgenaue</strong> Umsetzung des bereitgestellten Designs.",
+  "PROJECT_DESCRIPTION_SKATESHOP": "Die E-Commerce-Webanwendung, basierend auf <strong>React</strong> und dem <strong>commercetools</strong> Cloud-Backend, wurde von einem Team von 3 Entwicklern erstellt, in dem ich tätig war.",
   "PROJECT_DESCRIPTION_KEYBOARD": "Virtuelle Tastatur auf JavaScript mit Sprachumschaltung und Unterstützung einer physischen Tastatur.",
   "PROJECT_DESCRIPTION_CSSSELECTORS": "Ein Klon von CSS Diner, einem Online-Spiel zum Trainieren von CSS-Selektoren, wurde auf TypeScript erstellt.",
   "PROJECT_DESCRIPTION_MINESWEEPER": "Klassisches Minensuchspiel in vanilla JavaScript.",
   "PROJECT_DESCRIPTION_ASYNCRACE": "Lernprojekt zur Client-Server-Interaktion. Damit das Spiel funktioniert, muss ein node-Server gestartet werden, von dem die Autos Informationen über Geschwindigkeit oder Fehlfunktionen erhalten.",
-  "PROJECT_DESCRIPTION_THISSITE": "Meine persönliche Website auf React. Die Internalisierungsbibliothek i18next wurde verwendet. Routing, Farbthemawechsel und CSS-Animation – implementiert."
+  "PROJECT_DESCRIPTION_THISSITE": "Meine persönliche Website auf <strong>React</strong>. Die Internalisierungsbibliothek <strong>i18next</strong> wurde verwendet. Routing, Farbthemawechsel und CSS-Animation – implementiert."
 }

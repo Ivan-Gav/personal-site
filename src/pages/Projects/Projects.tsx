@@ -1,8 +1,7 @@
-import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import cn from 'classnames';
 import s from './Projects.module.css';
-import Slide from 'src/components/UI/Slide/Slide';
+import Slide, { SlideProps } from 'src/components/UI/Slide/Slide';
 
 import fol from 'src/assets/pics/fol.jpg';
 import graphiql from 'src/assets/pics/graphiql.jpg';
@@ -13,39 +12,39 @@ import cssselectors from 'src/assets/pics/cssselectors.jpg';
 import minesweeper from 'src/assets/pics/minesweeper.jpg';
 import asyncrace from 'src/assets/pics/asyncrace.jpg';
 import thissite from 'src/assets/pics/thissite.jpg';
+import { Skills } from 'src/@types/models';
 
 export default function Projects() {
-  const { t } = useTranslation();
   const { device } = useMediaQuery();
 
-  const projects = [
+  const projects: SlideProps[] = [
     {
       name: 'gavrilin.online',
       img: thissite,
-      description: t('PROJECT_DESCRIPTION_THISSITE'),
-      stack: ['React', 'TypeScript', 'CSS', 'Vite'],
+      description_key: 'PROJECT_DESCRIPTION_THISSITE',
+      stack: [Skills.REACT, Skills.TYPESCRIPT, Skills.CSS, Skills.VITE],
       git: 'https://github.com/Ivan-Gav/personal-site',
     },
     {
       name: 'fontan-online.ru',
       img: fol,
-      description: t('PROJECT_DESCRIPTION_FOL'),
-      stack: ['HTML', 'CSS', 'openCart'],
+      description_key: 'PROJECT_DESCRIPTION_FOL',
+      stack: [Skills.HTML, Skills.CSS, Skills.OPENCART],
       href: 'https://fontan-online.ru',
     },
     {
       name: 'GraphiQl',
       img: graphiql,
-      description: t('PROJECT_DESCRIPTION_GRAPHIQL'),
+      description_key: 'PROJECT_DESCRIPTION_GRAPHIQL',
       stack: [
-        'React',
-        'Redux',
-        'Material UI',
-        'GraphQL',
-        'TypeScript',
-        'CSS',
-        'Vite',
-        'Vitest',
+        Skills.REACT,
+        Skills.REDUX,
+        Skills.MATERIALUI,
+        Skills.GRAPHQL,
+        Skills.TYPESCRIPT,
+        Skills.CSS,
+        Skills.VITE,
+        Skills.VITEST,
       ],
       git: 'https://github.com/Ivan-Gav/graphiql-app',
       href: 'https://graphiql-app-black.vercel.app/',
@@ -53,48 +52,54 @@ export default function Projects() {
     {
       name: 'Shelter',
       img: shelter,
-      description: t('PROJECT_DESCRIPTION_SHELTER'),
-      stack: ['HTML', 'SCSS', 'JavaScript'],
+      description_key: 'PROJECT_DESCRIPTION_SHELTER',
+      stack: [Skills.HTML, Skills.SCSS, Skills.JAVASCRIPT],
       git: 'https://github.com/Ivan-Gav/shelter',
       href: 'https://ivan-gav.github.io/shelter/',
     },
     {
       name: 'Skate Shop',
       img: skateshop,
-      description: t('PROJECT_DESCRIPTION_SKATESHOP'),
-      stack: ['React', 'TypeScript', 'SCSS', 'Vite', 'Vitest'],
+      description_key: 'PROJECT_DESCRIPTION_SKATESHOP',
+      stack: [
+        Skills.REACT,
+        Skills.TYPESCRIPT,
+        Skills.SCSS,
+        Skills.VITE,
+        Skills.VITEST,
+      ],
       git: 'https://github.com/Ivan-Gav/eCommerce-Application',
       href: 'https://e-commerce-application-roan.vercel.app/',
     },
     {
       name: 'CSS Selectors',
       img: cssselectors,
-      description: t('PROJECT_DESCRIPTION_CSSSELECTORS'),
-      stack: ['TypeScript', 'HTML', 'CSS', 'Webpack'],
+      description_key: 'PROJECT_DESCRIPTION_CSSSELECTORS',
+      stack: [Skills.TYPESCRIPT, Skills.HTML, Skills.CSS, Skills.WEBPACK],
       git: 'https://github.com/Ivan-Gav/css-selectors',
       href: 'https://ivan-gav.github.io/css-selectors/',
     },
     {
       name: 'Minesweeper',
       img: minesweeper,
-      description: t('PROJECT_DESCRIPTION_MINESWEEPER'),
-      stack: ['JavaScript', 'HTML', 'CSS'],
+      description_key: 'PROJECT_DESCRIPTION_MINESWEEPER',
+      stack: [Skills.JAVASCRIPT, Skills.HTML, Skills.CSS],
       git: 'https://github.com/Ivan-Gav/minesweeper',
       href: 'https://ivan-gav.github.io/minesweeper/',
     },
     {
       name: 'Virtual Keyboard',
       img: keyboard,
-      description: t('PROJECT_DESCRIPTION_KEYBOARD'),
-      stack: ['JavaScript', 'HTML', 'CSS'],
+      description_key: 'PROJECT_DESCRIPTION_KEYBOARD',
+      stack: [Skills.JAVASCRIPT, Skills.HTML, Skills.CSS],
       git: 'https://github.com/Ivan-Gav/virtual-keyboard',
       href: 'https://ivan-gav.github.io/virtual-keyboard/',
     },
     {
       name: 'Async Race',
       img: asyncrace,
-      description: t('PROJECT_DESCRIPTION_ASYNCRACE'),
-      stack: ['TypeScript', 'HTML', 'CSS', 'Webpack'],
+      description_key: 'PROJECT_DESCRIPTION_ASYNCRACE',
+      stack: [Skills.TYPESCRIPT, Skills.HTML, Skills.CSS, Skills.WEBPACK],
       git: 'https://github.com/Ivan-Gav/async-race',
     },
   ];
@@ -107,7 +112,7 @@ export default function Projects() {
           key={p.name}
           name={p.name}
           img={p.img}
-          description={p.description}
+          description_key={p.description_key}
           stack={p.stack}
           git={p.git}
           href={p.href}

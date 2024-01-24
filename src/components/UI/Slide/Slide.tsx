@@ -1,27 +1,25 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation, Trans } from 'react-i18next';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import cn from 'classnames';
 import s from './Slide.module.css';
 import Skill from '../Skill/Skill';
 import SourceLink from '../SourceLink/SourceLink';
-import { useEffect } from 'react';
+import { Dictionary, Skills } from 'src/@types/models';
 
-type SlideProps = {
-  odd: boolean;
+export type SlideProps = {
+  odd?: boolean;
   name: string;
   img: string;
-  description: string;
-  stack?: string[];
+  description_key: Dictionary;
+  stack?: Skills[];
   git?: string;
   href?: string;
 };
 
 export default function Slide(props: SlideProps) {
-  const { name, img, description, stack, git, href, odd } = props;
+  const { name, img, description_key, stack, git, href, odd } = props;
   const { t } = useTranslation();
   const { device } = useMediaQuery();
-
-  useEffect(() => console.log(device), [device]);
 
   return (
     <div
@@ -40,7 +38,9 @@ export default function Slide(props: SlideProps) {
       </div>
       <div className={s.slide_text}>
         <h3 className={s.slide_name}>{name}</h3>
-        <p className={s.slide_description}>{description}</p>
+        <p className={s.slide_description}>
+          <Trans i18nKey={description_key} />
+        </p>
         {!!stack && !!stack.length && (
           <>
             <h4 className={s.slide_stack_title}>{t('STACK')}</h4>

@@ -38,12 +38,12 @@
   "STACK": "Stack",
   "SITE": "Site",
   "PROJECT_DESCRIPTION_FOL": "An online store of equipment for ponds and fountains is built using the OpenCart CMS and a ready-made template. The product range includes more than 2000 goods.",
-  "PROJECT_DESCRIPTION_GRAPHIQL": "The online editor of GraphQL queries made on React. The functionality includes authorization, a bilingual interface, the ability to select an arbitrary GraphQL API, download its interactive documentation, send requests and display server responses.",
-  "PROJECT_DESCRIPTION_SHELTER": "The adaptive two-page website of the animal shelter is made in JavaScript and SCSS. It contains a slider and pagination with random on-the-fly generation of content. The task also included pixel perfect implementation of the provided design.",
-  "PROJECT_DESCRIPTION_SKATESHOP": "The e-commerce application, based on React and the commercetools cloud backend, created by a team of 3 developers I was in.",
+  "PROJECT_DESCRIPTION_GRAPHIQL": "The online editor of <strong>GraphQL</strong> queries made on <strong>React</strong>. The functionality includes authorization, a bilingual interface, the ability to select an arbitrary GraphQL API, download its interactive documentation, send requests and display server responses.",
+  "PROJECT_DESCRIPTION_SHELTER": "The adaptive two-page website of the animal shelter is made in JavaScript and SCSS. It contains a slider and pagination with random on-the-fly generation of content. The task also included <strong>pixel perfect</strong> implementation of the provided design.",
+  "PROJECT_DESCRIPTION_SKATESHOP": "The e-commerce application, based on <strong>React</strong> and the <strong>commercetools</strong> cloud backend, created by a team of 3 developers I was in.",
   "PROJECT_DESCRIPTION_KEYBOARD": "Virtual keyboard on JavaScript with language switching and physical keyboard support.",
   "PROJECT_DESCRIPTION_CSSSELECTORS": "A clone of CSS Diner, an online game for training CSS selectors, is made using TypeScript.",
   "PROJECT_DESCRIPTION_MINESWEEPER": "Classic Minesweeper game in vanilla JavaScript.",
   "PROJECT_DESCRIPTION_ASYNCRACE": "Learning project on client-server interaction. For the game to work, it's necessary to run a node server from which the cars receive information about speed or malfunction.",
-  "PROJECT_DESCRIPTION_THISSITE": "My personal website on React. The i18next internalization library was used. Routing, color theme switching, and CSS animation were implemented."
+  "PROJECT_DESCRIPTION_THISSITE": "My personal website on <strong>React</strong>. The <strong>i18next</strong> internalization library was used. Routing, color theme switching, and CSS animation were implemented."
 }

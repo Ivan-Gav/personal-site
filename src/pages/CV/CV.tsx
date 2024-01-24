@@ -1,8 +1,9 @@
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import cn from 'classnames';
 import s from './CV.module.css';
 import Card from 'src/components/UI/Card/Card';
+import { Skills } from 'src/@types/models';
 
 export default function CV() {
   const { t } = useTranslation();
@@ -17,23 +18,23 @@ export default function CV() {
             isProfile
             company={t('IG')}
             position={t('FRONTEND_DEVELOPER')}
-            description={<Trans i18nKey="PROFILE_DESCRIPTION" />}
+            description_key="PROFILE_DESCRIPTION"
             skills={[
-              'React',
-              'Redux',
-              'Next.JS',
-              'Material UI',
-              'GraphQL',
-              'JavaScript',
-              'TypeScript',
-              'Git',
-              'GitHub',
-              'Webpack',
-              'Vite',
-              'Vitest',
-              'HTML',
-              'CSS',
-              'SCSS',
+              Skills.REACT,
+              Skills.REDUX,
+              Skills.NEXTJS,
+              Skills.MATERIALUI,
+              Skills.GRAPHQL,
+              Skills.JAVASCRIPT,
+              Skills.TYPESCRIPT,
+              Skills.GIT,
+              Skills.GITHUB,
+              Skills.WEBPACK,
+              Skills.VITE,
+              Skills.VITEST,
+              Skills.HTML,
+              Skills.CSS,
+              Skills.SCSS,
             ]}
           />
           <h3 className={s.cv_title}>{t('EXPERIENCE')}</h3>
@@ -43,8 +44,8 @@ export default function CV() {
             company="fontan-online.ru"
             location={t('MOSCOW')}
             position={t('IP')}
-            description={t('IP_DESCRIPTION')}
-            skills={['HTML', 'CSS', 'openCart']}
+            description_key="IP_DESCRIPTION"
+            skills={[Skills.HTML, Skills.CSS, Skills.OPENCART]}
           />
           <Card
             fromDate="2000"
@@ -52,7 +53,7 @@ export default function CV() {
             company={t('OSKO')}
             location={t('MOSCOW')}
             position={t('OSKO_POSITION')}
-            description={t('OSKO_DESCRIPTION')}
+            description_key="OSKO_DESCRIPTION"
             skills={[t('SKILLS_SALES'), t('SKILLS_MANAGEMENT')]}
           />
         </div>
@@ -63,18 +64,18 @@ export default function CV() {
             toDate="01.2024"
             company="Rolling Scopes School"
             position={t('FRONTEND_DEVELOPER')}
-            description={<Trans i18nKey="RSS_DESCRIPTION_REACT" />}
+            description_key="RSS_DESCRIPTION_REACT"
             skills={[
-              'React',
-              'Redux',
-              'Next.JS',
-              'Material UI',
-              'GraphQL',
-              'JavaScript',
-              'TypeScript',
-              'Git',
-              'Vite',
-              'Vitest',
+              Skills.REACT,
+              Skills.REDUX,
+              Skills.NEXTJS,
+              Skills.MATERIALUI,
+              Skills.GRAPHQL,
+              Skills.JAVASCRIPT,
+              Skills.TYPESCRIPT,
+              Skills.GIT,
+              Skills.VITE,
+              Skills.VITEST,
             ]}
             link={{
               href: 'https://app.rs.school/certificate/gd6t14w7',
@@ -86,18 +87,18 @@ export default function CV() {
             toDate="10.2023"
             company="Rolling Scopes School"
             position={t('FRONTEND_DEVELOPER')}
-            description={<Trans i18nKey="RSS_DESCRIPTION_JS" />}
+            description_key="RSS_DESCRIPTION_JS"
             skills={[
-              'JavaScript',
-              'TypeScript',
-              'Git',
-              'React',
-              'Webpack',
-              'Vite',
-              'Vitest',
-              'SCSS',
-              'HTML',
-              'CSS',
+              Skills.JAVASCRIPT,
+              Skills.TYPESCRIPT,
+              Skills.GIT,
+              Skills.REACT,
+              Skills.WEBPACK,
+              Skills.VITE,
+              Skills.VITEST,
+              Skills.SCSS,
+              Skills.HTML,
+              Skills.CSS,
             ]}
             link={{
               href: 'https://app.rs.school/certificate/e1mh0dpb',
@@ -110,7 +111,7 @@ export default function CV() {
             company={t('MPEI')}
             location={t('MOSCOW')}
             position={t('MPEI_POSITION')}
-            description={t('MPEI_DESCRIPTION')}
+            description_key="MPEI_DESCRIPTION"
           />
           <h3 className={s.cv_title}>{t('LANGS')}</h3>
           <ul className={s.cv_list}>

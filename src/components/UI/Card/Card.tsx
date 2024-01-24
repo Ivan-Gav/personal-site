@@ -1,7 +1,20 @@
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import s from './Card.module.css';
 import Skill from '../Skill/Skill';
+import { Dictionary, Skills } from 'src/@types/models';
+
+// type CardProps = {
+//   isProfile?: boolean;
+//   fromDate?: string;
+//   toDate?: string;
+//   company: string;
+//   position: string;
+//   location?: string;
+//   description: React.ReactNode | string;
+//   skills?: string[];
+//   link?: { href: string; text: string };
+// };
 
 type CardProps = {
   isProfile?: boolean;
@@ -10,8 +23,8 @@ type CardProps = {
   company: string;
   position: string;
   location?: string;
-  description: React.ReactNode | string;
-  skills?: string[];
+  description_key: Dictionary;
+  skills?: (Skills | string)[];
   link?: { href: string; text: string };
 };
 
@@ -23,7 +36,7 @@ export default function Card(props: CardProps) {
     company,
     location,
     position,
-    description,
+    description_key,
     skills,
     link,
   } = props;
@@ -50,7 +63,9 @@ export default function Card(props: CardProps) {
         )}
       </div>
       <h4 className={s.card_position}>{position}</h4>
-      <p className={s.card_description}>{description}</p>
+      <p className={s.card_description}>
+        <Trans i18nKey={description_key} />
+      </p>
       {!!skills?.length && (
         <>
           <h5 className={s.card_skills_title}>{t('SKILLS')}</h5>

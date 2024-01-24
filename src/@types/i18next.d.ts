@@ -1,7 +1,5 @@
 import text_en from 'public/locales/en/translation.json';
 
-// const resources = { text_en };
-
 declare module 'i18next' {
   interface CustomTypeOptions {
     resources: { translation: typeof text_en };
