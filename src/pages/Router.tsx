@@ -3,6 +3,7 @@ import RootLayout from 'src/layout/RootLayout';
 import Page404 from './404/404';
 import CV from './CV/CV';
 import Hero from './Hero/Hero';
+import Projects from './Projects/Projects';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'projects',
-        element: <h1>My Projects</h1>,
+        element: <Projects />,
       },
       {
         path: 'contact',

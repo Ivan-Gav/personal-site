@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import s from './Card.module.css';
-import { IconKeysType } from 'src/assets/icons/index';
 import Skill from '../Skill/Skill';
 
 type CardProps = {
@@ -12,7 +11,7 @@ type CardProps = {
   position: string;
   location?: string;
   description: React.ReactNode | string;
-  skills?: { skill: string; icon?: IconKeysType }[];
+  skills?: string[];
   link?: { href: string; text: string };
 };
 
@@ -57,14 +56,7 @@ export default function Card(props: CardProps) {
           <h5 className={s.card_skills_title}>{t('SKILLS')}</h5>
           <ul className={s.card_skills_list}>
             {skills.map((skill) => (
-              <Skill
-                skill={skill.skill}
-                icon={skill.icon}
-                key={`${company}-${skill.skill}`}
-              />
-              // <li className={s.card_skill} key={`${company}-${skill}`}>
-              //   {skill}
-              // </li>
+              <Skill skill={skill} key={`${company}-${skill}`} />
             ))}
           </ul>
         </>

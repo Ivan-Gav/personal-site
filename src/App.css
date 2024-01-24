@@ -1,5 +1,6 @@
 #light {
   --color-text: var(--color-dark-normal);
+  --color-text-dim: var(--color-dark-low);
   --color-bg-light: var(--color-light-extra);
   --color-bg: var(--color-light-normal);
   --color-bg-shadow: var(--color-light-low);
@@ -11,6 +12,7 @@
 
 #dark {
   --color-text: var(--color-light-normal);
+  --color-text-dim: var(--color-light-low);
   --color-bg-light: var(--color-dark-extra);
   --color-bg: var(--color-dark-normal);
   --color-bg-shadow: var(--color-dark-extra);

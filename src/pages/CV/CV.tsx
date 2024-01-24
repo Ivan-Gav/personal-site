@@ -12,30 +12,31 @@ export default function CV() {
     <section className={s.cv}>
       <div className={cn(s.cv_box, device === 'mobile' && s.mobile)}>
         <div className={s.cv_exp}>
-          <h3 className={s.cv_exp_title}>{t('PROFILE')}</h3>
+          <h3 className={s.cv_title}>{t('PROFILE')}</h3>
           <Card
             isProfile
             company={t('IG')}
             position={t('FRONTEND_DEVELOPER')}
             description={<Trans i18nKey="PROFILE_DESCRIPTION" />}
             skills={[
-              { skill: 'React', icon: 'REACT' },
-              { skill: 'Redux', icon: 'REDUX' },
-              { skill: 'Material UI', icon: 'MUI' },
-              { skill: 'GraphQL', icon: 'GRAPHQL' },
-              { skill: 'JavaScript', icon: 'JS' },
-              { skill: 'TypeScript', icon: 'TS' },
-              { skill: 'Git', icon: 'GIT' },
-              { skill: 'GitHub', icon: 'GITHUB' },
-              { skill: 'Webpack', icon: 'WEBPACK' },
-              { skill: 'Vite', icon: 'VITE' },
-              { skill: 'Vitest', icon: 'VITEST' },
-              { skill: 'HTML', icon: 'HTML' },
-              { skill: 'CSS', icon: 'CSS' },
-              { skill: 'SCSS', icon: 'SCSS' },
+              'React',
+              'Redux',
+              'Next.JS',
+              'Material UI',
+              'GraphQL',
+              'JavaScript',
+              'TypeScript',
+              'Git',
+              'GitHub',
+              'Webpack',
+              'Vite',
+              'Vitest',
+              'HTML',
+              'CSS',
+              'SCSS',
             ]}
           />
-          <h3 className={s.cv_exp_title}>{t('EXPERIENCE')}</h3>
+          <h3 className={s.cv_title}>{t('EXPERIENCE')}</h3>
           <Card
             fromDate="2012"
             toDate={t('PRESENT')}
@@ -43,11 +44,7 @@ export default function CV() {
             location={t('MOSCOW')}
             position={t('IP')}
             description={t('IP_DESCRIPTION')}
-            skills={[
-              { skill: 'HTML', icon: 'HTML' },
-              { skill: 'CSS', icon: 'CSS' },
-              { skill: 'openCart', icon: 'OPENCART' },
-            ]}
+            skills={['HTML', 'CSS', 'openCart']}
           />
           <Card
             fromDate="2000"
@@ -56,14 +53,11 @@ export default function CV() {
             location={t('MOSCOW')}
             position={t('OSKO_POSITION')}
             description={t('OSKO_DESCRIPTION')}
-            skills={[
-              { skill: t('SKILLS_SALES') },
-              { skill: t('SKILLS_MANAGEMENT') },
-            ]}
+            skills={[t('SKILLS_SALES'), t('SKILLS_MANAGEMENT')]}
           />
         </div>
         <div className={s.cv_edu}>
-          <h3 className={s.cv_exp_title}>{t('EDUCATION')}</h3>
+          <h3 className={s.cv_title}>{t('EDUCATION')}</h3>
           <Card
             fromDate="10.2023"
             toDate="01.2024"
@@ -71,15 +65,16 @@ export default function CV() {
             position={t('FRONTEND_DEVELOPER')}
             description={<Trans i18nKey="RSS_DESCRIPTION_REACT" />}
             skills={[
-              { skill: 'React', icon: 'REACT' },
-              { skill: 'Redux', icon: 'REDUX' },
-              { skill: 'Material UI', icon: 'MUI' },
-              { skill: 'GraphQL', icon: 'GRAPHQL' },
-              { skill: 'JavaScript', icon: 'JS' },
-              { skill: 'TypeScript', icon: 'TS' },
-              { skill: 'Git', icon: 'GIT' },
-              { skill: 'Vite', icon: 'VITE' },
-              { skill: 'Vitest', icon: 'VITEST' },
+              'React',
+              'Redux',
+              'Next.JS',
+              'Material UI',
+              'GraphQL',
+              'JavaScript',
+              'TypeScript',
+              'Git',
+              'Vite',
+              'Vitest',
             ]}
             link={{
               href: 'https://app.rs.school/certificate/gd6t14w7',
@@ -93,16 +88,16 @@ export default function CV() {
             position={t('FRONTEND_DEVELOPER')}
             description={<Trans i18nKey="RSS_DESCRIPTION_JS" />}
             skills={[
-              { skill: 'JavaScript', icon: 'JS' },
-              { skill: 'TypeScript', icon: 'TS' },
-              { skill: 'Git', icon: 'GIT' },
-              { skill: 'React', icon: 'REACT' },
-              { skill: 'Webpack', icon: 'WEBPACK' },
-              { skill: 'Vite', icon: 'VITE' },
-              { skill: 'Vitest', icon: 'VITEST' },
-              { skill: 'SCSS', icon: 'SCSS' },
-              { skill: 'HTML', icon: 'HTML' },
-              { skill: 'CSS', icon: 'CSS' },
+              'JavaScript',
+              'TypeScript',
+              'Git',
+              'React',
+              'Webpack',
+              'Vite',
+              'Vitest',
+              'SCSS',
+              'HTML',
+              'CSS',
             ]}
             link={{
               href: 'https://app.rs.school/certificate/e1mh0dpb',
@@ -117,7 +112,7 @@ export default function CV() {
             position={t('MPEI_POSITION')}
             description={t('MPEI_DESCRIPTION')}
           />
-          <h3 className={s.cv_exp_title}>{t('LANGS')}</h3>
+          <h3 className={s.cv_title}>{t('LANGS')}</h3>
           <ul className={s.cv_list}>
             <li>
               <span>{t('LANGS_EN')}</span> - B1+{' '}

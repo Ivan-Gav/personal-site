@@ -1,0 +1,13 @@
+.projects_container {
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+  padding-block: 2vw;
+  padding-inline: 7vw;
+}
+
+.projects_container.mobile {
+  padding-inline: 1rem;
+}

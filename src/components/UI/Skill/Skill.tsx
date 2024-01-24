@@ -7,17 +7,19 @@ type SkillProps = {
 };
 
 export default function Skill(props: SkillProps) {
-  const { skill, icon } = props;
+  const { skill } = props;
 
   function Icon() {
-    if (!icon) return null;
-    const SVG = icons[icon];
+    const iconName = skill.replace(/([\s.])+/g, '').toUpperCase();
+
+    if (!(iconName in icons)) return null;
+    const SVG = icons[iconName as keyof typeof icons];
     return <SVG />;
   }
 
   return (
     <li className={s.skill}>
-      {!!icon && <Icon />}
+      <Icon />
       {skill}
     </li>
   );
