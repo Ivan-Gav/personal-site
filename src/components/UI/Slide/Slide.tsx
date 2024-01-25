@@ -1,5 +1,6 @@
 import { useTranslation, Trans } from 'react-i18next';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
+import { useInView } from 'react-intersection-observer';
 import cn from 'classnames';
 import s from './Slide.module.css';
 import Skill from '../Skill/Skill';
@@ -20,13 +21,16 @@ export default function Slide(props: SlideProps) {
   const { name, img, description_key, stack, git, href, odd } = props;
   const { t } = useTranslation();
   const { device } = useMediaQuery();
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
     <div
+      ref={ref}
       className={cn(
         s.slide,
         device !== 'desktop' && s.mobile,
-        odd && device === 'desktop' && s.odd
+        odd && device === 'desktop' && s.odd,
+        inView && s.active
       )}
     >
       <div className={s.slide_img_container}>
