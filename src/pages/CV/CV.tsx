@@ -3,7 +3,7 @@ import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import cn from 'classnames';
 import s from './CV.module.css';
 import Card from 'src/components/UI/Card/Card';
-import { Skills } from 'src/@types/models';
+import { SKILLS } from 'src/@types/models';
 
 export default function CV() {
   const { t } = useTranslation();
@@ -20,21 +20,21 @@ export default function CV() {
             position={t('FRONTEND_DEVELOPER')}
             description_key="PROFILE_DESCRIPTION"
             skills={[
-              Skills.REACT,
-              Skills.REDUX,
-              Skills.NEXTJS,
-              Skills.MATERIALUI,
-              Skills.GRAPHQL,
-              Skills.JAVASCRIPT,
-              Skills.TYPESCRIPT,
-              Skills.GIT,
-              Skills.GITHUB,
-              Skills.WEBPACK,
-              Skills.VITE,
-              Skills.VITEST,
-              Skills.HTML,
-              Skills.CSS,
-              Skills.SCSS,
+              SKILLS.REACT,
+              SKILLS.REDUX,
+              SKILLS.NEXTJS,
+              SKILLS.MATERIALUI,
+              SKILLS.GRAPHQL,
+              SKILLS.JAVASCRIPT,
+              SKILLS.TYPESCRIPT,
+              SKILLS.GIT,
+              SKILLS.GITHUB,
+              SKILLS.WEBPACK,
+              SKILLS.VITE,
+              SKILLS.VITEST,
+              SKILLS.HTML,
+              SKILLS.CSS,
+              SKILLS.SCSS,
             ]}
           />
           <h3 className={s.cv_title}>{t('EXPERIENCE')}</h3>
@@ -45,7 +45,7 @@ export default function CV() {
             location={t('MOSCOW')}
             position={t('IP')}
             description_key="IP_DESCRIPTION"
-            skills={[Skills.HTML, Skills.CSS, Skills.OPENCART]}
+            skills={[SKILLS.HTML, SKILLS.CSS, SKILLS.OPENCART]}
           />
           <Card
             fromDate="2000"
@@ -66,16 +66,16 @@ export default function CV() {
             position={t('FRONTEND_DEVELOPER')}
             description_key="RSS_DESCRIPTION_REACT"
             skills={[
-              Skills.REACT,
-              Skills.REDUX,
-              Skills.NEXTJS,
-              Skills.MATERIALUI,
-              Skills.GRAPHQL,
-              Skills.JAVASCRIPT,
-              Skills.TYPESCRIPT,
-              Skills.GIT,
-              Skills.VITE,
-              Skills.VITEST,
+              SKILLS.REACT,
+              SKILLS.REDUX,
+              SKILLS.NEXTJS,
+              SKILLS.MATERIALUI,
+              SKILLS.GRAPHQL,
+              SKILLS.JAVASCRIPT,
+              SKILLS.TYPESCRIPT,
+              SKILLS.GIT,
+              SKILLS.VITE,
+              SKILLS.VITEST,
             ]}
             link={{
               href: 'https://app.rs.school/certificate/gd6t14w7',
@@ -89,16 +89,16 @@ export default function CV() {
             position={t('FRONTEND_DEVELOPER')}
             description_key="RSS_DESCRIPTION_JS"
             skills={[
-              Skills.JAVASCRIPT,
-              Skills.TYPESCRIPT,
-              Skills.GIT,
-              Skills.REACT,
-              Skills.WEBPACK,
-              Skills.VITE,
-              Skills.VITEST,
-              Skills.SCSS,
-              Skills.HTML,
-              Skills.CSS,
+              SKILLS.JAVASCRIPT,
+              SKILLS.TYPESCRIPT,
+              SKILLS.GIT,
+              SKILLS.REACT,
+              SKILLS.WEBPACK,
+              SKILLS.VITE,
+              SKILLS.VITEST,
+              SKILLS.SCSS,
+              SKILLS.HTML,
+              SKILLS.CSS,
             ]}
             link={{
               href: 'https://app.rs.school/certificate/e1mh0dpb',

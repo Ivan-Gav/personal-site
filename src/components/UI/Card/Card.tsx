@@ -2,7 +2,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import s from './Card.module.css';
 import Skill from '../Skill/Skill';
-import { Dictionary, Skills } from 'src/@types/models';
+import { Dictionary, SkillName } from 'src/@types/models';
 
 // type CardProps = {
 //   isProfile?: boolean;
@@ -24,7 +24,7 @@ type CardProps = {
   position: string;
   location?: string;
   description_key: Dictionary;
-  skills?: (Skills | string)[];
+  skills?: (SkillName | string)[];
   link?: { href: string; text: string };
 };
 

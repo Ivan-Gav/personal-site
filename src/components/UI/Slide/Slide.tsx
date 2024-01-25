@@ -5,14 +5,14 @@ import cn from 'classnames';
 import s from './Slide.module.css';
 import Skill from '../Skill/Skill';
 import SourceLink from '../SourceLink/SourceLink';
-import { Dictionary, Skills } from 'src/@types/models';
+import { Dictionary, SkillName } from 'src/@types/models';
 
 export type SlideProps = {
   odd?: boolean;
   name: string;
   img: string;
   description_key: Dictionary;
-  stack?: Skills[];
+  stack?: SkillName[];
   git?: string;
   href?: string;
 };

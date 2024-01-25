@@ -12,7 +12,7 @@ import cssselectors from 'src/assets/pics/cssselectors.jpg';
 import minesweeper from 'src/assets/pics/minesweeper.jpg';
 import asyncrace from 'src/assets/pics/asyncrace.jpg';
 import thissite from 'src/assets/pics/thissite.jpg';
-import { Skills } from 'src/@types/models';
+import { SKILLS } from 'src/@types/models';
 
 export default function Projects() {
   const { device } = useMediaQuery();
@@ -22,14 +22,14 @@ export default function Projects() {
       name: 'gavrilin.online',
       img: thissite,
       description_key: 'PROJECT_DESCRIPTION_THISSITE',
-      stack: [Skills.REACT, Skills.TYPESCRIPT, Skills.CSS, Skills.VITE],
+      stack: [SKILLS.REACT, SKILLS.TYPESCRIPT, SKILLS.CSS, SKILLS.VITE],
       git: 'https://github.com/Ivan-Gav/personal-site',
     },
     {
       name: 'fontan-online.ru',
       img: fol,
       description_key: 'PROJECT_DESCRIPTION_FOL',
-      stack: [Skills.HTML, Skills.CSS, Skills.OPENCART],
+      stack: [SKILLS.HTML, SKILLS.CSS, SKILLS.OPENCART],
       href: 'https://fontan-online.ru',
     },
     {
@@ -37,14 +37,14 @@ export default function Projects() {
       img: graphiql,
       description_key: 'PROJECT_DESCRIPTION_GRAPHIQL',
       stack: [
-        Skills.REACT,
-        Skills.REDUX,
-        Skills.MATERIALUI,
-        Skills.GRAPHQL,
-        Skills.TYPESCRIPT,
-        Skills.CSS,
-        Skills.VITE,
-        Skills.VITEST,
+        SKILLS.REACT,
+        SKILLS.REDUX,
+        SKILLS.MATERIALUI,
+        SKILLS.GRAPHQL,
+        SKILLS.TYPESCRIPT,
+        SKILLS.CSS,
+        SKILLS.VITE,
+        SKILLS.VITEST,
       ],
       git: 'https://github.com/Ivan-Gav/graphiql-app',
       href: 'https://graphiql-app-black.vercel.app/',
@@ -53,7 +53,7 @@ export default function Projects() {
       name: 'Shelter',
       img: shelter,
       description_key: 'PROJECT_DESCRIPTION_SHELTER',
-      stack: [Skills.HTML, Skills.SCSS, Skills.JAVASCRIPT],
+      stack: [SKILLS.HTML, SKILLS.SCSS, SKILLS.JAVASCRIPT],
       git: 'https://github.com/Ivan-Gav/shelter',
       href: 'https://ivan-gav.github.io/shelter/',
     },
@@ -62,11 +62,11 @@ export default function Projects() {
       img: skateshop,
       description_key: 'PROJECT_DESCRIPTION_SKATESHOP',
       stack: [
-        Skills.REACT,
-        Skills.TYPESCRIPT,
-        Skills.SCSS,
-        Skills.VITE,
-        Skills.VITEST,
+        SKILLS.REACT,
+        SKILLS.TYPESCRIPT,
+        SKILLS.SCSS,
+        SKILLS.VITE,
+        SKILLS.VITEST,
       ],
       git: 'https://github.com/Ivan-Gav/eCommerce-Application',
       href: 'https://e-commerce-application-roan.vercel.app/',
@@ -75,7 +75,7 @@ export default function Projects() {
       name: 'CSS Selectors',
       img: cssselectors,
       description_key: 'PROJECT_DESCRIPTION_CSSSELECTORS',
-      stack: [Skills.TYPESCRIPT, Skills.HTML, Skills.CSS, Skills.WEBPACK],
+      stack: [SKILLS.TYPESCRIPT, SKILLS.HTML, SKILLS.CSS, SKILLS.WEBPACK],
       git: 'https://github.com/Ivan-Gav/css-selectors',
       href: 'https://ivan-gav.github.io/css-selectors/',
     },
@@ -83,7 +83,7 @@ export default function Projects() {
       name: 'Minesweeper',
       img: minesweeper,
       description_key: 'PROJECT_DESCRIPTION_MINESWEEPER',
-      stack: [Skills.JAVASCRIPT, Skills.HTML, Skills.CSS],
+      stack: [SKILLS.JAVASCRIPT, SKILLS.HTML, SKILLS.CSS],
       git: 'https://github.com/Ivan-Gav/minesweeper',
       href: 'https://ivan-gav.github.io/minesweeper/',
     },
@@ -91,7 +91,7 @@ export default function Projects() {
       name: 'Virtual Keyboard',
       img: keyboard,
       description_key: 'PROJECT_DESCRIPTION_KEYBOARD',
-      stack: [Skills.JAVASCRIPT, Skills.HTML, Skills.CSS],
+      stack: [SKILLS.JAVASCRIPT, SKILLS.HTML, SKILLS.CSS],
       git: 'https://github.com/Ivan-Gav/virtual-keyboard',
       href: 'https://ivan-gav.github.io/virtual-keyboard/',
     },
@@ -99,7 +99,7 @@ export default function Projects() {
       name: 'Async Race',
       img: asyncrace,
       description_key: 'PROJECT_DESCRIPTION_ASYNCRACE',
-      stack: [Skills.TYPESCRIPT, Skills.HTML, Skills.CSS, Skills.WEBPACK],
+      stack: [SKILLS.TYPESCRIPT, SKILLS.HTML, SKILLS.CSS, SKILLS.WEBPACK],
       git: 'https://github.com/Ivan-Gav/async-race',
     },
   ];
