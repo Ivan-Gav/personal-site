@@ -1,5 +1,5 @@
 import s from './SourceLink.module.css';
-import icons from 'src/assets/icons';
+import Icon from '../Icon/Icon';
 
 type SourceLinkProps = {
   type: string;
@@ -10,17 +10,9 @@ type SourceLinkProps = {
 export default function SourceLink(props: SourceLinkProps) {
   const { type, href, text } = props;
 
-  function Icon() {
-    const iconName = type.toUpperCase();
-
-    if (!(iconName in icons)) return null;
-    const SVG = icons[iconName as keyof typeof icons];
-    return <SVG />;
-  }
-
   return (
     <a className={s.sourcelink} href={href} title={text} target="blank">
-      <Icon />
+      <Icon skill={type} />
       <span>{text}</span>
     </a>
   );
