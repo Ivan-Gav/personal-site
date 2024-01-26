@@ -56,8 +56,8 @@ export default function Slide(props: SlideProps) {
           </>
         )}
         <div className={s.slide_links}>
-          {!!git && <SourceLink type="github" text="GitHub" href={git} />}
-          {!!href && <SourceLink type="href" text={t('SITE')} href={href} />}
+          {!!git && <SourceLink skill="github" text="GitHub" href={git} />}
+          {!!href && <SourceLink skill="href" text={t('SITE')} href={href} />}
         </div>
       </div>
     </div>

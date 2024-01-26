@@ -15,6 +15,11 @@ import VITEST from './vitest.svg?react';
 import WEBPACK from './webpack.svg?react';
 import NEXTJS from './nextjs.svg?react';
 import HREF from './href.svg?react';
+import TELEGRAM from './telegram.svg?react';
+import EMAIL from './email.svg?react';
+import PHONE from './phone.svg?react';
+import LINKEDIN from './linkedin.svg?react';
+import DISCORD from './discord.svg?react';
 
 const icons = {
   CSS,
@@ -34,6 +39,11 @@ const icons = {
   WEBPACK,
   NEXTJS,
   HREF,
+  TELEGRAM,
+  EMAIL,
+  PHONE,
+  LINKEDIN,
+  DISCORD,
 };
 export type IconKeysType = keyof typeof icons;
 

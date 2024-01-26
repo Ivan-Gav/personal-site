@@ -1,0 +1,42 @@
+.social_link {
+  flex-grow: 0;
+  flex-basis: 2rem;
+  min-width: 2rem;
+  max-width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--color-text);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.social_link svg {
+  font-size: 2rem;
+}
+
+.social_link:hover,
+.social_link:focus {
+  color: var(--color-accent);
+  flex-grow: 1;
+  transition: flex .5s ease-in;
+}
+
+.link_content_box {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.link_text {
+  /* width: 13.25rem; */
+  text-overflow: clip;
+  text-decoration: solid underline var(--color-accent) 2px;
+  text-underline-offset: 4px;
+}
+
+.social_link:hover .link_text,
+.social_link:focus .link_text {
+  color: var(--color-text);
+}

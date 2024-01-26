@@ -3,26 +3,6 @@ import { IconKeysType } from 'src/assets/icons';
 
 export type Dictionary = keyof typeof text_en;
 
-// export enum Skills {
-//   CSS = 'CSS',
-//   GIT = 'Git',
-//   GITHUB = 'GitHub',
-//   GRAPHQL = 'GraphQL',
-//   HTML = 'HTML',
-//   JAVASCRIPT = 'JavaScript',
-//   MATERIALUI = 'Material UI',
-//   OPENCART = 'openCart',
-//   REACT = 'React',
-//   REDUX = 'Redux',
-//   SCSS = 'SCSS',
-//   TYPESCRIPT = 'TypeScript',
-//   VITE = 'Vite',
-//   VITEST = 'Vitest',
-//   WEBPACK = 'Webpack',
-//   NEXTJS = 'Next.JS',
-//   HREF = 'href',
-// }
-
 export type SkillName =
   | 'CSS'
   | 'Git'
@@ -40,7 +20,12 @@ export type SkillName =
   | 'Vitest'
   | 'Webpack'
   | 'Next.JS'
-  | 'href';
+  | 'href'
+  | 'Telegram'
+  | 'Email'
+  | 'Phone'
+  | 'LinkedIn'
+  | 'Discord';
 
 export const SKILLS: { [key in IconKeysType]: SkillName } = {
   CSS: 'CSS',
@@ -60,4 +45,9 @@ export const SKILLS: { [key in IconKeysType]: SkillName } = {
   WEBPACK: 'Webpack',
   NEXTJS: 'Next.JS',
   HREF: 'href',
+  TELEGRAM: 'Telegram',
+  EMAIL: 'Email',
+  PHONE: 'Phone',
+  LINKEDIN: 'LinkedIn',
+  DISCORD: 'Discord',
 };
