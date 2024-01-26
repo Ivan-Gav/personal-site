@@ -1,5 +1,4 @@
 .hero {
-  min-height: calc(100dvh - var(--header-height) - var(--footer-height) - 0.2rem);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;

@@ -17,7 +17,7 @@
 }
 
 .social_link:hover,
-.social_link:focus {
+.social_link:focus-visible {
   color: var(--color-accent);
   flex-grow: 1;
   transition: flex .5s ease-in;

@@ -8,31 +8,41 @@ import SocialLink, {
 } from 'src/components/UI/SocialLink/SocialLink';
 import FooterLink from 'src/components/UI/FooterLink/FooterLink';
 
+const DISCORD_HREF = import.meta.env.VITE_DISCORD_HREF;
+const DISCORD_TEXT = import.meta.env.VITE_DISCORD_TEXT;
+const PHONE_HREF = import.meta.env.VITE_PHONE_HREF;
+const PHONE_TEXT = import.meta.env.VITE_PHONE_TEXT;
+const EMAIL = import.meta.env.VITE_EMAIL;
+const TELEGRAM_HREF = import.meta.env.VITE_TELEGRAM_HREF;
+const TELEGRAM_TEXT = import.meta.env.VITE_TELEGRAM_TEXT;
+const GITHUB_HREF = import.meta.env.VITE_GITHUB_HREF;
+const GITHUB_TEXT = import.meta.env.VITE_GITHUB_TEXT;
+
 const socialLinks: SocialLinkProps[] = [
   {
     skill: 'Discord',
-    href: 'https://discordapp.com/users/1081264866641326080',
-    text: 'Ivan G (@ivan-gav)',
+    href: DISCORD_HREF,
+    text: DISCORD_TEXT,
   },
   {
     skill: 'Phone',
-    href: '+74956650335',
-    text: '+7(495)665-0-335',
+    href: PHONE_HREF,
+    text: PHONE_TEXT,
   },
   {
     skill: 'Email',
-    href: 'gavrilin.ivan.v@gmail.com',
-    text: 'gavrilin.ivan.v@gmail.com',
+    href: EMAIL,
+    text: EMAIL,
   },
   {
     skill: 'Telegram',
-    href: 'https://t.me/too_old_to_code',
-    text: 'too_old_to_code',
+    href: TELEGRAM_HREF,
+    text: TELEGRAM_TEXT,
   },
   {
     skill: 'GitHub',
-    href: 'https://github.com/Ivan-Gav',
-    text: 'Ivan-Gav',
+    href: GITHUB_HREF,
+    text: GITHUB_TEXT,
   },
 ];
 
@@ -40,6 +50,8 @@ export default function Footer() {
   const [ref, inView] = useInView();
   const { t } = useTranslation();
   const { device } = useMediaQuery();
+
+  console.log(socialLinks[2].text);
 
   return (
     <>
