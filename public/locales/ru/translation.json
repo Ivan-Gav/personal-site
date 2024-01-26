@@ -45,5 +45,7 @@
   "PROJECT_DESCRIPTION_CSSSELECTORS": "Клон CSS Diner - онлайн тренажёра по CSS селекторам, выполнен на TypeScript.",
   "PROJECT_DESCRIPTION_MINESWEEPER": "Классическая игра Cапёр на чистом JavaScript.",
   "PROJECT_DESCRIPTION_ASYNCRACE": "Учебный проект по отработке взаимодействия клиент-сервер. Для работы игры нужно запустить node сервер, от которого машинки получают информацию о скорости или неисправности.",
-  "PROJECT_DESCRIPTION_THISSITE": "Мой персональный сайт на <strong>React</strong>. Использована библиотека интернализации <strong>i18next</strong>, реализован роутинг, переключение цветовой темы, CSS анимация."
+  "PROJECT_DESCRIPTION_THISSITE": "Мой персональный сайт на <strong>React</strong>. Использована библиотека интернализации <strong>i18next</strong>, реализован роутинг, переключение цветовой темы, CSS анимация.",
+  "PRIVACY_POLICY": "Политика конфиденциальности",
+  "DOWNLOAD_CV": "Скачать резюме"
 }

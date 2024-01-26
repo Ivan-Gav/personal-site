@@ -1,10 +1,12 @@
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import cn from 'classnames';
 import s from './Footer.module.css';
 import SocialLink, {
   SocialLinkProps,
 } from 'src/components/UI/SocialLink/SocialLink';
+import FooterLink from 'src/components/UI/FooterLink/FooterLink';
 
 const socialLinks: SocialLinkProps[] = [
   {
@@ -37,16 +39,33 @@ const socialLinks: SocialLinkProps[] = [
 export default function Footer() {
   const [ref, inView] = useInView();
   const { t } = useTranslation();
+  const { device } = useMediaQuery();
 
   return (
     <>
-      <footer className={cn(s.footer, inView && s.inview)}>
-        <div className={s.copiright}>©2024 {t('IG')}</div>
+      <footer
+        className={cn(
+          s.footer,
+          inView && s.inview,
+          device === 'tablet' && s.tablet,
+          device === 'mobile' && s.mobile
+        )}
+      >
+        <div className={s.footer_links}>
+          <FooterLink text={t('CONTACT')} to="/contact" />
+          <FooterLink text={t('DOWNLOAD_CV')} to="/" />
+          <FooterLink text={t('PRIVACY_POLICY')} to="/" />
+        </div>
         <div className={s.social_links}>
           {socialLinks.map((link) => (
-            <SocialLink {...link} key={'social_' + link.skill} />
+            <SocialLink
+              {...link}
+              key={'social_' + link.skill}
+              mobile={device === 'mobile'}
+            />
           ))}
         </div>
+        <div className={s.copyright}>©2024 {t('IG')}</div>
       </footer>
       <div ref={ref} className={s.bottom} />
     </>

@@ -6,10 +6,11 @@ export type SocialLinkProps = {
   skill: SkillName;
   href: string;
   text?: string;
+  mobile?: boolean;
 };
 
 export default function SocialLink(props: SocialLinkProps) {
-  const { skill, href, text } = props;
+  const { skill, href, text, mobile } = props;
 
   const prefix =
     skill === 'Email' ? 'mailto:' : skill === 'Phone' ? 'tel:' : '';
@@ -23,7 +24,7 @@ export default function SocialLink(props: SocialLinkProps) {
     >
       <div className={s.link_content_box}>
         <Icon skill={skill} />
-        <div className={s.link_text}>{text}</div>
+        {!mobile && <div className={s.link_text}>{text}</div>}
       </div>
     </a>
   );

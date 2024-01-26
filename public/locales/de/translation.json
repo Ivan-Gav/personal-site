@@ -45,5 +45,7 @@
   "PROJECT_DESCRIPTION_CSSSELECTORS": "Ein Klon von CSS Diner, einem Online-Spiel zum Trainieren von CSS-Selektoren, wurde auf TypeScript erstellt.",
   "PROJECT_DESCRIPTION_MINESWEEPER": "Klassisches Minensuchspiel in vanilla JavaScript.",
   "PROJECT_DESCRIPTION_ASYNCRACE": "Lernprojekt zur Client-Server-Interaktion. Damit das Spiel funktioniert, muss ein node-Server gestartet werden, von dem die Autos Informationen über Geschwindigkeit oder Fehlfunktionen erhalten.",
-  "PROJECT_DESCRIPTION_THISSITE": "Meine persönliche Website auf <strong>React</strong>. Die Internalisierungsbibliothek <strong>i18next</strong> wurde verwendet. Routing, Farbthemawechsel und CSS-Animation – implementiert."
+  "PROJECT_DESCRIPTION_THISSITE": "Meine persönliche Website auf <strong>React</strong>. Die Internalisierungsbibliothek <strong>i18next</strong> wurde verwendet. Routing, Farbthemawechsel und CSS-Animation – implementiert.",
+  "PRIVACY_POLICY": "Datenschutz",
+  "DOWNLOAD_CV": "Lebenslauf herunterladen"
 }
