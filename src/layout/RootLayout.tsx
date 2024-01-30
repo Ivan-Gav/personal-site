@@ -1,8 +1,10 @@
 import { Suspense } from 'react';
 import { Outlet, ScrollRestoration } from 'react-router-dom';
+
+import s from './RootLayout.module.css';
 import Header from './Header';
 import Footer from './Footer';
-import s from './RootLayout.module.css';
+import SideTab from 'src/components/SideTab/SideTab';
 
 export default function RootLayout() {
   return (
@@ -12,6 +14,7 @@ export default function RootLayout() {
         <Suspense fallback={<h2>Loading...</h2>}>
           <ScrollRestoration />
           <Outlet />
+          <SideTab />
         </Suspense>
       </main>
       <Footer />

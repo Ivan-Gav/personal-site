@@ -48,10 +48,8 @@ const socialLinks: SocialLinkProps[] = [
 
 export default function Footer() {
   const [ref, inView] = useInView();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { device } = useMediaQuery();
-
-  console.log(socialLinks[2].text);
 
   return (
     <>
@@ -65,7 +63,11 @@ export default function Footer() {
       >
         <div className={s.footer_links}>
           <FooterLink text={t('CONTACT')} to="/contact" />
-          <FooterLink text={t('DOWNLOAD_CV')} to="/" />
+          <FooterLink
+            text={t('DOWNLOAD_CV')}
+            to={`/pdf/Ivan-Gavrilin-FrontEnd-Dev-${i18n.language.toUpperCase()}.pdf`}
+            target="_blank"
+          />
           <FooterLink text={t('PRIVACY_POLICY')} to="/" />
         </div>
         <div className={s.social_links}>
