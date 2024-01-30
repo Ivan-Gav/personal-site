@@ -12,7 +12,7 @@
   "HERO_CTA": "Resume",
   "PRESENT": "present",
   "MOSCOW": "Moscow, Russia",
-  "IP": "Individual Enterpreneur",
+  "IP": "Individual Entrepreneur",
   "IP_DESCRIPTION": "I work as an individual entrepreneur, running an online store, which I created from scratch using openCart CMS. Making the store was interesting, however, the routine of order processing and accounting does not seem so riveting to me anymore. In 2022, I decided to switch my career and started a frontend developer training, that I have accomplished by now.",
   "SKILLS": "Skills",
   "OSKO": "OSKO, Stiebel Eltron, Hydroplastics",
@@ -47,5 +47,13 @@
   "PROJECT_DESCRIPTION_ASYNCRACE": "Learning project on client-server interaction. For the game to work, it's necessary to run a node server from which the cars receive information about speed or malfunction.",
   "PROJECT_DESCRIPTION_THISSITE": "My personal website on <strong>React</strong>. The <strong>i18next</strong> internalization library was used. Routing, color theme switching, and CSS animation were implemented.",
   "PRIVACY_POLICY": "Privacy policy",
-  "DOWNLOAD_CV": "Download resume"
+  "DOWNLOAD_CV": "Download resume",
+  "NAME": "Name",
+  "EMAIL": "Email",
+  "MESSAGE": "Message",
+  "I_ACCEPT_1": "I have read and accept the ",
+  "I_ACCEPT_2": "",
+  "PRIVACY_POLICY_TO_ACCEPT": "Privacy policy",
+  "SEND": "Send",
+  "TEXT_ME": "Text me"
 }

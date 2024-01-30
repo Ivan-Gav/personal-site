@@ -1,0 +1,38 @@
+.contact_link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--color-text);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.contact_link svg {
+  font-size: 2rem;
+}
+
+.contact_link:hover,
+.contact_link:focus-visible {
+  color: var(--color-accent);
+  transition: flex .5s ease-in;
+}
+
+.link_content_box {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: .5rem;
+}
+
+.link_text {
+  text-overflow: clip;
+  text-decoration: none;
+}
+
+.contact_link:hover .link_text,
+.contact_link:focus .link_text {
+  color: var(--color-text);
+  text-decoration: solid underline var(--color-accent) 2px;
+  text-underline-offset: 4px;
+}

@@ -34,7 +34,7 @@
   "LANGS_DE": "Deutsch",
   "LANGS_NATIVE": "Muttersprache",
   "PROFILE": "Kurzprofil",
-  "PROFILE_DESCRIPTION": "Ich arbeite an <strong>React</strong> und reinem JS/TS, kann ein adaptives Layout erstellen und Tests schreiben. Ich lerne aktiv und erweitere meinen Stack ständig. Ins Frontend kam Ich aus dem Bereich des Internethandels. Von meinem früheren Arbeitsplatz habe ich die Fähigkeit zur Kommunikation und das Verständnis für die clientseitige Sichtweise des Webdesigns mitgebracht. Ich spreche Englisch und Deutsch. Ich lebe in Moskau, aber bin bereit zum Umzug.",
+  "PROFILE_DESCRIPTION": "Ich arbeite mit <strong>React</strong> und reinem JS/TS, kann ein adaptives Layout erstellen und Tests schreiben. Ich lerne aktiv und erweitere meinen Stack ständig. Ins Frontend kam ich aus dem Bereich des Internethandels. Von meinem früheren Arbeitsplatz habe ich die Fähigkeit zur Kommunikation und das Verständnis für die clientseitige Sichtweise des Webdesigns mitgebracht. Ich spreche Englisch und Deutsch. Ich lebe in Moskau, aber bin bereit zum Umzug.",
   "STACK": "Stack",
   "SITE": "Seite",
   "PROJECT_DESCRIPTION_FOL": "Dieser Online-Shop für Teich- und Springbrunnentechnik wurde auf der Basis des OpenCart CMS und einer fertigen Vorlage erstellt. Die Produktpalette umfasst mehr als 2000 Waren.",
@@ -47,5 +47,13 @@
   "PROJECT_DESCRIPTION_ASYNCRACE": "Lernprojekt zur Client-Server-Interaktion. Damit das Spiel funktioniert, muss ein node-Server gestartet werden, von dem die Autos Informationen über Geschwindigkeit oder Fehlfunktionen erhalten.",
   "PROJECT_DESCRIPTION_THISSITE": "Meine persönliche Website auf <strong>React</strong>. Die Internalisierungsbibliothek <strong>i18next</strong> wurde verwendet. Routing, Farbthemawechsel und CSS-Animation – implementiert.",
   "PRIVACY_POLICY": "Datenschutz",
-  "DOWNLOAD_CV": "Lebenslauf herunterladen"
+  "DOWNLOAD_CV": "Lebenslauf herunterladen",
+  "NAME": "Name",
+  "EMAIL": "Email",
+  "MESSAGE": "Nachricht",
+  "I_ACCEPT_1": "Ich habe die ",
+  "I_ACCEPT_2": " gelesen and akzeptiere diese",
+  "PRIVACY_POLICY_TO_ACCEPT": "Datenschutzbestimmungen",
+  "SEND": "Senden",
+  "TEXT_ME": "Mir schreiben"
 }

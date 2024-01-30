@@ -4,6 +4,7 @@ import Page404 from './404/404';
 import CV from './CV/CV';
 import Hero from './Hero/Hero';
 import Projects from './Projects/Projects';
+import ContactPage from './Contact/ContactPage';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'contact',
-        element: <h1>Get in touch with me</h1>,
+        element: <ContactPage />,
       },
     ],
   },
