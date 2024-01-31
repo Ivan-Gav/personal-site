@@ -57,5 +57,12 @@
   "SEND": "Send",
   "TEXT_ME": "Text me",
   "HIDE": "Hide",
-  "EXPAND": "Expand"
+  "EXPAND": "Expand",
+  "ERRMSG_NAME_REQ": "Please enter your name",
+  "ERRMSG_NAME_LENGTH": "Please enter at least 2 letters :)",
+  "ERRMSG_NAME_CHARS": "Name should start with at least 2 LETTERS",
+  "ERRMSG_EMAIL": "Incorrect email format",
+  "ERRMSG_MESSAGE_REQ": "Please write something",
+  "ERRMSG_MESSAGE_LENGTH": "To send a message you have to write it first",
+  "ERRMSG_PRIVACY_REQ": "Your consent is required"
 }

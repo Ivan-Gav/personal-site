@@ -94,7 +94,7 @@ div:has(.input:focus-visible) {
   /* color: var(--color-accent); */
   color: red;
   padding: .3rem 1rem;
-  height: 1.5rem;
+  min-height: 1.5rem;
   width: 100%;
 }
 
@@ -119,10 +119,14 @@ div:has(.input:focus-visible) {
 
 .privacy_box {
   grid-area: privacy;
-  display: flex;
-  align-items: start;
-  gap: .5rem;
+  display: grid;
+  grid-template-columns: 1.1rem auto;
+  gap: .1rem .5rem;
   padding-inline: .5rem;
+}
+
+.privacy_box .error {
+  padding-inline: 0 1rem;
 }
 
 .btn_box {
@@ -135,4 +139,62 @@ div:has(.input:focus-visible) {
   color: var(--color-text-dim);
   text-decoration: underline;
   text-underline-offset: .25rem;
+}
+
+.checkbox_container {
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox_input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox {
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+  position: relative;
+  outline: solid 1px var(--color-text-dim);
+  border-radius: 0.1rem;
+  border: none;
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+  transition: background-color .3s ease-in;
+ }
+
+ .checkbox_input:checked ~ .checkbox {
+  background-color: var(--color-active);
+}
+.checkbox_container input:checked ~ .checkbox:after {
+  opacity: 1;
+}
+.checkbox_container:hover input ~ .checkbox {
+  background-color: var(--color-active);
+}
+.checkbox_container:hover input:checked ~ .checkbox {
+  background-color: var(--color-active);
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  left: .25rem;
+  top: 0;
+  width: .5rem;
+  height: .8rem;
+  border: solid var(--color-text);
+  border-width: 0 2px 2px 0;
+  transform: rotate(37deg);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }

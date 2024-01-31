@@ -57,5 +57,12 @@
   "SEND": "Senden",
   "TEXT_ME": "Mir schreiben",
   "HIDE": "Verstecken",
-  "EXPAND": "Anzeigen"
+  "EXPAND": "Anzeigen",
+  "ERRMSG_NAME_REQ": "Bitte geben Sie Ihren Namen ein",
+  "ERRMSG_NAME_LENGTH": "Geben Sie bitte mindestens 2 Buchstaben ein :)",
+  "ERRMSG_NAME_CHARS": "Ein Name startet üblich mit mindestens 2 BUCHSTABEN",
+  "ERRMSG_EMAIL": "Inkorrektes Format der E-Mail-Adresse",
+  "ERRMSG_MESSAGE_REQ": "Um eine Nachricht zu senden, schreiben Sie sie zuerst",
+  "ERRMSG_MESSAGE_LENGTH": "Zu wenig Text für eine informative Nachricht",
+  "ERRMSG_PRIVACY_REQ": "Ihre Zustimmung ist erforderlich"
 }
