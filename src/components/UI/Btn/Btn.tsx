@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 type BtnProps = {
   children: React.ReactNode | string;
-  onClick: () => void;
+  onClick?: () => void;
   addClass?: string;
   type?: 'submit' | 'reset' | 'button';
   disabled?: boolean;

@@ -13,6 +13,11 @@
   transition: background-color .3s ease-in;
 }
 
+.btn[disabled] {
+  border-color: var(--color-text);
+  pointer-events: none;
+}
+
 .btn:hover {
   background-color: var(--color-active);
 }
