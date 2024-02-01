@@ -26,6 +26,9 @@
 
   --header-height: 3rem;
   --footer-height: 4.5rem;
+
+  --font-base: 'Montserrat', Helvetica, Arial, Inter, system-ui, sans-serif;
+  --font-header: 'Rubik', 'Montserrat', Helvetica, Arial, Inter, system-ui, sans-serif;
   
   min-height: 100dvh;
 }

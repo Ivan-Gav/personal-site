@@ -45,7 +45,7 @@
 
 .hero_title {
   grid-area: header;
-  font-family: 'Rubik';
+  font-family: var(--font-header);
   font-size: clamp(1rem, 3.4cqw , 8rem);
   margin: 0;
   align-self: end;

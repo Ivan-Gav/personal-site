@@ -7,10 +7,11 @@ type SwitchProps = {
   contentOff: React.ReactNode;
   onChange: (checked: boolean) => void;
   initial?: boolean;
+  id?: string;
 };
 
 export default function Switch(props: SwitchProps) {
-  const { title, contentOn, contentOff, onChange, initial } = props;
+  const { title, contentOn, contentOff, onChange, initial, id } = props;
   const [checked, setChecked] = useState(initial || false);
 
   const handleChange = () => {
@@ -25,6 +26,7 @@ export default function Switch(props: SwitchProps) {
         type="checkbox"
         checked={checked}
         onChange={handleChange}
+        id={id}
       />
       <span className={s.switch_box}>
         <span className={checked ? s.switch_on : s.switch_off}>

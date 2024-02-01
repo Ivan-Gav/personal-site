@@ -10,7 +10,7 @@ i18next
   .init({
     // lng: 'en', // if you're using a language detector, do not define the lng option
     defaultNS: 'translation',
-    debug: true,
+    debug: false,
     supportedLngs: ['en', 'de', 'ru'],
     interpolation: {
       escapeValue: false,

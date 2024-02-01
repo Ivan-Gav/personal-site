@@ -17,6 +17,7 @@ export default function ThemeSwitch() {
       contentOff={<Sun />}
       contentOn={<Moon />}
       initial={dark}
+      id="themeswitch"
     />
   );
 }

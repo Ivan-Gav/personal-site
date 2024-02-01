@@ -105,7 +105,9 @@ export default function Projects() {
   ];
 
   return (
-    <div className={cn(s.projects_container, device === 'mobile' && s.mobile)}>
+    <section
+      className={cn(s.projects_container, device === 'mobile' && s.mobile)}
+    >
       {projects.map((p, i) => (
         <Slide
           odd={!!(i % 2)}
@@ -118,6 +120,6 @@ export default function Projects() {
           href={p.href}
         />
       ))}
-    </div>
+    </section>
   );
 }
