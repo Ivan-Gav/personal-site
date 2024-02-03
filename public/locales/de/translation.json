@@ -64,5 +64,7 @@
   "ERRMSG_EMAIL": "Inkorrektes Format der E-Mail-Adresse",
   "ERRMSG_MESSAGE_REQ": "Um eine Nachricht zu senden, schreiben Sie sie zuerst",
   "ERRMSG_MESSAGE_LENGTH": "Zu wenig Text für eine informative Nachricht",
-  "ERRMSG_PRIVACY_REQ": "Ihre Zustimmung ist erforderlich"
+  "ERRMSG_PRIVACY_REQ": "Ihre Zustimmung ist erforderlich",
+  "ERRMSG_SENT": "Nachricht gesendet",
+  "ERRMSG_FAIL": "Sendefehler"
 }

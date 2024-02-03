@@ -24,6 +24,9 @@
   --color-accent-dark-normal: #DC2F02;
   --color-accent-dark-extra: #D00000;
 
+  --color-success: rgb(0, 181, 0);
+  --color-failure: rgb(255, 31, 1);
+
   --header-height: 3rem;
   --footer-height: 4.5rem;
 

@@ -64,5 +64,7 @@
   "ERRMSG_EMAIL": "Incorrect email format",
   "ERRMSG_MESSAGE_REQ": "Please write something",
   "ERRMSG_MESSAGE_LENGTH": "To send a message you have to write it first",
-  "ERRMSG_PRIVACY_REQ": "Your consent is required"
+  "ERRMSG_PRIVACY_REQ": "Your consent is required",
+  "ERRMSG_SENT": "Message sent",
+  "ERRMSG_FAIL": "Sending error"
 }

@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
+import toast, { Toaster } from 'react-hot-toast';
 
 import cn from 'classnames';
 import s from './ContactForm.module.css';
+import Check from 'src/assets/icons/check.svg?react';
+import Fail from 'src/assets/icons/fail.svg?react';
 import Btn from '../UI/Btn/Btn';
 import Loading from '../UI/Loading/Loading';
 
@@ -55,9 +58,21 @@ export default function ContactForm() {
     });
 
     if (response.ok) {
-      console.log('Message delivered!');
+      toast.success(t('ERRMSG_SENT'), {
+        icon: <Check />,
+        style: {
+          background: 'var(--color-success)',
+          color: 'var(--color-text)',
+        },
+      });
     } else {
-      console.log('Message NOT delivered!');
+      toast.error(t('ERRMSG_FAIL'), {
+        icon: <Fail />,
+        style: {
+          background: 'var(--color-failure)',
+          color: 'var(--color-text)',
+        },
+      });
     }
   });
 
@@ -176,6 +191,7 @@ export default function ContactForm() {
           </div>
         )}
       </form>
+      <Toaster position="bottom-center" reverseOrder={false} />
     </>
   );
 }
