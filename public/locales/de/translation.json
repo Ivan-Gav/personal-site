@@ -66,5 +66,7 @@
   "ERRMSG_MESSAGE_LENGTH": "Zu wenig Text für eine informative Nachricht",
   "ERRMSG_PRIVACY_REQ": "Ihre Zustimmung ist erforderlich",
   "ERRMSG_SENT": "Nachricht gesendet",
-  "ERRMSG_FAIL": "Sendefehler"
+  "ERRMSG_FAIL": "Sendefehler",
+  "PAGE_NOT_FOUND": "Seite nicht gefunden",
+  "RETURN_HOME": "Zurück zur Hauptseite"
 }

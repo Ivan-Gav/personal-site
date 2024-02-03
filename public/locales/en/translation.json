@@ -66,5 +66,7 @@
   "ERRMSG_MESSAGE_LENGTH": "To send a message you have to write it first",
   "ERRMSG_PRIVACY_REQ": "Your consent is required",
   "ERRMSG_SENT": "Message sent",
-  "ERRMSG_FAIL": "Sending error"
+  "ERRMSG_FAIL": "Sending error",
+  "PAGE_NOT_FOUND": "Page is not found",
+  "RETURN_HOME": "Return to Main page"
 }
