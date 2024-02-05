@@ -17,7 +17,7 @@ export default function SideTab() {
     const firstTime = setTimeout(() => {
       setAnimated(false);
       clearTimeout(firstTime);
-    }, 3000);
+    }, 5000);
   }, []);
 
   if (device === 'mobile') {

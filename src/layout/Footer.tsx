@@ -68,7 +68,7 @@ export default function Footer() {
             to={`/pdf/Ivan-Gavrilin-FrontEnd-Dev-${i18n.language.toUpperCase()}.pdf`}
             target="_blank"
           />
-          <FooterLink text={t('PRIVACY_POLICY')} to="/" />
+          <FooterLink text={t('PRIVACY_POLICY')} to="/privacy" />
         </div>
         <div className={s.social_links}>
           {socialLinks.map((link) => (

@@ -10,6 +10,7 @@
 
 .card.profile {
   border-bottom: none;
+  border-radius: .25rem;
   background-color: var(--color-bg-light);
   margin-block: 1.5rem;
 }

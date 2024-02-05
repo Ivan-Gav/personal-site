@@ -1,10 +1,13 @@
+import { lazy } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from 'src/layout/RootLayout';
-import Page404 from './404/404';
-import CV from './CV/CV';
-import Hero from './Hero/Hero';
-import Projects from './Projects/Projects';
-import ContactPage from './Contact/ContactPage';
+
+const Page404 = lazy(() => import('./404/404'));
+const CV = lazy(() => import('./CV/CV'));
+const Hero = lazy(() => import('./Hero/Hero'));
+const Projects = lazy(() => import('./Projects/Projects'));
+const ContactPage = lazy(() => import('./Contact/ContactPage'));
+const Privacy = lazy(() => import('./Privacy/Privacy'));
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <ContactPage />,
+      },
+      {
+        path: 'privacy',
+        element: <Privacy />,
       },
     ],
   },

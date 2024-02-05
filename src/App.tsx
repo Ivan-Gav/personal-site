@@ -5,6 +5,7 @@ import 'src/i18n/i18n';
 import './App.css';
 import { ThemeProvider } from './context/ThemeContext';
 import Router from './pages/Router';
+import Fallback from './components/Fallback/Fallback';
 
 function App() {
   const defaultTheme = window.matchMedia('(prefers-color-scheme: dark').matches;
@@ -14,7 +15,7 @@ function App() {
 
   return (
     <ErrorBoundary fallback={<h1>Something went wrong</h1>}>
-      <Suspense fallback={<h1>Loading..</h1>}>
+      <Suspense fallback={<Fallback />}>
         <ThemeProvider value={{ dark, setDark }}>
           <div id={dark ? 'dark' : 'light'} className="app_container">
             <Router />

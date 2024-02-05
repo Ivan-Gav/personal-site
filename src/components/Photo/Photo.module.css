@@ -33,8 +33,18 @@
   border-top: none;
 }
 
+.skeleton {
+  position: absolute;
+}
+
 .photo {
   position: relative;
   display: block;
   object-fit: contain;
+  opacity: 0;
+  transition: opacity .2s ease-in;
+}
+
+.photo.loaded {
+  opacity: 1;
 }

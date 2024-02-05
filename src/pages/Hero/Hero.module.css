@@ -39,9 +39,11 @@
   margin-block: 0 2rem;
 }
 
-/* .hero.mobile .hero_text {
-  left: 0;
-} */
+.hero_slogan {
+  font-family: var(--font-handwriting);
+  font-size: clamp(2rem, 2.3cqw , 6rem);
+  color: var(--color-active);
+}
 
 .hero_title {
   grid-area: header;

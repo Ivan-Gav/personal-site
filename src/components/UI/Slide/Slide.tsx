@@ -36,7 +36,7 @@ export default function Slide(props: SlideProps) {
       <div className={s.slide_img_container}>
         <div className={s.slide_img_frame}>
           <div className={s.slide_img}>
-            <img src={img} alt={name} />
+            <img loading="lazy" src={img} alt={name} />
           </div>
         </div>
       </div>
