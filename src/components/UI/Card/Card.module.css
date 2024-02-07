@@ -27,6 +27,7 @@
 .card_company {
   margin: 0;
   font-family: var(--font-header);
+  font-weight: 500;
   font-size: 1.4rem;
 }
 

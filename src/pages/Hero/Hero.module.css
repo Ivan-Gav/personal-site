@@ -49,6 +49,7 @@
   grid-area: header;
   font-family: var(--font-header);
   font-size: clamp(1rem, 3.4cqw , 8rem);
+  font-weight: 500;
   margin: 0;
   align-self: end;
 }

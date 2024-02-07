@@ -80,6 +80,7 @@
 
 .slide_name {
   font-family: var(--font-header);
+  font-weight: 500;
   font-size: clamp(1.4rem, 2.4rem, 6vw);
   color: var(--color-active);
 }

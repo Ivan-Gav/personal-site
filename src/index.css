@@ -1,3 +1,53 @@
+@font-face {
+  font-family:'Caveat';
+  src: url('fonts/Caveat-SemiBold.woff2') format('woff2'),
+  url('fonts/Caveat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-052E;
+}
+
+@font-face {
+  font-family:'Montserrat';
+  src: url('fonts/Montserrat-Medium.woff2') format('woff2'),
+  url('fonts/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family:'Montserrat';
+  src: url('fonts/Montserrat-SemiBold.woff2') format('woff2'),
+  url('fonts/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family:'Montserrat';
+  src: url('fonts/Montserrat-Bold.woff2') format('woff2'),
+  url('fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family:'Rubik';
+  src: url('fonts/Rubik-Medium.woff2') format('woff2'),
+  url('fonts/Rubik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2084;
+}
+
 :root {
   font-family: 'Montserrat', Helvetica, Arial, Inter, system-ui, sans-serif;
   font-weight: 500;
