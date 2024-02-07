@@ -4,18 +4,6 @@ import s from './Card.module.css';
 import Skill from '../Skill/Skill';
 import { Dictionary, SkillName } from 'src/@types/models';
 
-// type CardProps = {
-//   isProfile?: boolean;
-//   fromDate?: string;
-//   toDate?: string;
-//   company: string;
-//   position: string;
-//   location?: string;
-//   description: React.ReactNode | string;
-//   skills?: string[];
-//   link?: { href: string; text: string };
-// };
-
 type CardProps = {
   isProfile?: boolean;
   fromDate?: string;
@@ -53,14 +41,16 @@ export default function Card(props: CardProps) {
         </div>
       )}
       <div className={s.card_title}>
-        <h4 className={s.card_company}>{company}</h4>
-        {!!location && (
-          <span className={s.card_location}>
-            {'['}
-            {location}
-            {']'}
-          </span>
-        )}
+        <h4 className={s.card_company}>
+          {company}
+          {!!location && (
+            <span className={s.card_location}>
+              {' ['}
+              {location}
+              {']'}
+            </span>
+          )}
+        </h4>
       </div>
       <h4 className={s.card_position}>{position}</h4>
       <p className={s.card_description}>

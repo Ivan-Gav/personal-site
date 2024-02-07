@@ -30,7 +30,9 @@
 .cv_title {
   margin: 0;
   font-size: 2.4rem;
-  align-self: flex-start;
+  width: clamp(300px, 100%, 600px);
+  padding-inline: 1rem;
+  /* align-self: flex-start; */
 }
 
 .cv_list {

@@ -9,7 +9,6 @@ import s from './Header.module.css';
 import HeaderLink from 'src/components/UI/HeaderLink/HeaderLink';
 import ThemeSwitch from 'src/components/ThemeSwitch/ThemeSwitch';
 import LangSelect from 'src/components/LangSelect/LangSelect';
-import Home from 'src/assets/icons/home.svg?react';
 import Burger from 'src/components/UI/Burger/Burger';
 import Drawer from 'src/components/UI/Drawer/Drawer';
 import { useScrollLock } from 'src/hooks/useScrollLock';
@@ -21,18 +20,14 @@ export default function Header() {
 
   function DesktopNav() {
     return (
-      <>
-        <div className={s.home_link}>
-          <HeaderLink to={'/'} title={t('HOME')}>
-            <Home />
-          </HeaderLink>
-        </div>
-        <nav className={s.desktop_nav}>
-          <HeaderLink to={'cv'}>{t('CV')}</HeaderLink>
-          <HeaderLink to={'projects'}>{t('PROJECTS')}</HeaderLink>
-          <HeaderLink to={'contact'}>{t('CONTACT')}</HeaderLink>
-        </nav>
-      </>
+      <nav className={s.desktop_nav}>
+        <HeaderLink to={'/'} title={t('HOME')}>
+          {t('HOME')}
+        </HeaderLink>
+        <HeaderLink to={'cv'}>{t('CV')}</HeaderLink>
+        <HeaderLink to={'projects'}>{t('PROJECTS')}</HeaderLink>
+        <HeaderLink to={'contact'}>{t('CONTACT')}</HeaderLink>
+      </nav>
     );
   }
 
@@ -66,19 +61,15 @@ export default function Header() {
 
     return (
       <>
-        <div>
-          <Burger active={active} onClick={onBurgerClick} />
-        </div>
-        <div>
-          <Drawer isOpen={active} onClick={onOverlayClick}>
-            <nav className={s.tablet_nav}>
-              <HeaderLink to={'/'}>{t('HOME')}</HeaderLink>
-              <HeaderLink to={'cv'}>{t('CV')}</HeaderLink>
-              <HeaderLink to={'projects'}>{t('PROJECTS')}</HeaderLink>
-              <HeaderLink to={'contact'}>{t('CONTACT')}</HeaderLink>
-            </nav>
-          </Drawer>
-        </div>
+        <Burger active={active} onClick={onBurgerClick} />
+        <Drawer isOpen={active} onClick={onOverlayClick}>
+          <nav className={s.tablet_nav}>
+            <HeaderLink to={'/'}>{t('HOME')}</HeaderLink>
+            <HeaderLink to={'cv'}>{t('CV')}</HeaderLink>
+            <HeaderLink to={'projects'}>{t('PROJECTS')}</HeaderLink>
+            <HeaderLink to={'contact'}>{t('CONTACT')}</HeaderLink>
+          </nav>
+        </Drawer>
       </>
     );
   }

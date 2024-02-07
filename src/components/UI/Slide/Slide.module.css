@@ -79,23 +79,18 @@
 }
 
 .slide_name {
-  font-family: 'Rubik';
+  font-family: var(--font-header);
   font-size: clamp(1.4rem, 2.4rem, 6vw);
   color: var(--color-active);
 }
 
-.slide_description {
-  text-align: justify;
-}
-
 .slide_stack_title {
   font-size: 1.2rem;
-  padding-inline: .5rem;
   color: var( --color-text-dim);
 }
 
 .slide_stack {
-  padding-inline: 1rem .5rem;
+  padding-inline: 0;
   list-style: none;
   display:flex;
   gap: .5rem 1.5rem;
@@ -104,7 +99,6 @@
 
 .slide_links {
   border-top: solid 1px var(--color-text-dim);
-  padding-inline: 1rem .5rem;
   padding-top: 1rem;
   display: flex;
   gap: .5rem 1.5rem;
