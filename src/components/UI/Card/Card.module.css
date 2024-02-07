@@ -48,7 +48,8 @@
 }
 
 .card_description {
-  line-height: 1.5;
+  line-height: 150%;
+  word-spacing: .25rem;
   margin: 0;
 }
 

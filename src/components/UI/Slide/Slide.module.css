@@ -84,6 +84,11 @@
   color: var(--color-active);
 }
 
+.slide_description {
+  line-height: 150%;
+  word-spacing: .25rem;
+}
+
 .slide_stack_title {
   font-size: 1.2rem;
   color: var( --color-text-dim);

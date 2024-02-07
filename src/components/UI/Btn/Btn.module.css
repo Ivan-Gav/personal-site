@@ -6,11 +6,13 @@
   border-radius: 100px;
   padding: .5rem 2rem;
   cursor: pointer;
-  font-family: 'Montserrat';
+  font-family: var(--font-base);
   font-weight: 600;
   font-size: 1.2rem;
   text-transform: uppercase;
   transition: background-color .3s ease-in;
+  overflow: hidden;
+  position: relative;
 }
 
 .btn[disabled] {
@@ -20,4 +22,38 @@
 
 .btn:hover {
   background-color: var(--color-active);
+}
+
+
+.btn:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .2;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  width: 50px;
+  animation: 30s cubic-bezier(0.19, 1, 0.22, 1) 5s flash infinite;
+}
+
+.btn[disabled]::after,
+.btn:hover::after {
+  animation: none;
+}
+
+@keyframes flash {
+  0% {
+    left: -75px;
+  }
+
+  4% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+
 }
