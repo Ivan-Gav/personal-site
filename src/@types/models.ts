@@ -25,7 +25,9 @@ export type SkillName =
   | 'Email'
   | 'Phone'
   | 'LinkedIn'
-  | 'Discord';
+  | 'Discord'
+  | 'Vue'
+  | 'Tailwind';
 
 export const SKILLS: { [key in IconKeysType]: SkillName } = {
   CSS: 'CSS',
@@ -50,4 +52,6 @@ export const SKILLS: { [key in IconKeysType]: SkillName } = {
   PHONE: 'Phone',
   LINKEDIN: 'LinkedIn',
   DISCORD: 'Discord',
+  VUE: 'Vue',
+  TAILWIND: 'Tailwind',
 };

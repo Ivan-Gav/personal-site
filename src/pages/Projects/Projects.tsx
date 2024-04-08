@@ -12,12 +12,21 @@ import cssselectors from 'src/assets/pics/cssselectors.jpg';
 import minesweeper from 'src/assets/pics/minesweeper.jpg';
 import asyncrace from 'src/assets/pics/asyncrace.jpg';
 import thissite from 'src/assets/pics/thissite.jpg';
+import vuesneakers from 'src/assets/pics/vuesneakers.jpg';
 import { SKILLS } from 'src/@types/models';
 
 export default function Projects() {
   const { device } = useMediaQuery();
 
   const projects: SlideProps[] = [
+    {
+      name: 'Vue-sneakers',
+      img: vuesneakers,
+      description_key: 'PROJECT_DESCRIPTION_VUESNEAKERS',
+      stack: [SKILLS.VUE, SKILLS.TAILWIND, SKILLS.VITE],
+      git: 'https://github.com/Ivan-Gav/vue-sneakers',
+      href: 'https://ivan-gav.github.io/vue-sneakers/',
+    },
     {
       name: 'gavrilin.online',
       img: thissite,

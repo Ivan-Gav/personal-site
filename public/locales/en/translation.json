@@ -46,6 +46,7 @@
   "PROJECT_DESCRIPTION_MINESWEEPER": "Classic Minesweeper game in vanilla JavaScript.",
   "PROJECT_DESCRIPTION_ASYNCRACE": "Learning project on client-server interaction. For the game to work, it's necessary to run a node server from which the cars receive information about speed or malfunction.",
   "PROJECT_DESCRIPTION_THISSITE": "My personal website on <strong>React</strong>. The <strong>i18next</strong> internalization library was used. Routing, color theme switching, and CSS animation were implemented.",
+  "PROJECT_DESCRIPTION_VUESNEAKERS": "A prototype of a <strong>Vue</strong>-based online store. Basic functionality is implemented: search, sorting, ordering, favorites. <strong>Tailwind CSS</strong> was used for styling.",
   "PRIVACY_POLICY": "Privacy policy",
   "DOWNLOAD_CV": "Download resume",
   "NAME": "Name",

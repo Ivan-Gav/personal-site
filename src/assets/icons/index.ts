@@ -20,6 +20,8 @@ import EMAIL from './email.svg?react';
 import PHONE from './phone.svg?react';
 import LINKEDIN from './linkedin.svg?react';
 import DISCORD from './discord.svg?react';
+import VUE from './vue.svg?react';
+import TAILWIND from './tailwind.svg?react';
 
 const icons = {
   CSS,
@@ -44,6 +46,8 @@ const icons = {
   PHONE,
   LINKEDIN,
   DISCORD,
+  VUE,
+  TAILWIND,
 };
 export type IconKeysType = keyof typeof icons;
 
