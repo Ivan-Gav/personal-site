@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(300px, 100%, 600px);
+  border-bottom: solid 2px var(--color-text);
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  gap: .5rem;
+}
+
+.card.profile {
+  border-bottom: none;
+  border-radius: .25rem;
+  background-color: var(--color-bg-light);
+  margin-block: 1.5rem;
+}
+
+.card:last-of-type {
+  border-bottom: none;
+}
+.card_title {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+}
+
+.card_company {
+  margin: 0;
+  font-family: var(--font-header);
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.card_location {
+  font-size: 1rem;
+  padding-left: .5rem;
+  color: var( --color-text-dim);
+}
+
+.card_position {
+  font-size: 1.2rem;
+  color: var(--color-active);
+  margin: 0;
+}
+
+
+.card_dates {
+  font-size: 1.2rem;  
+}
+
+.card_description {
+  line-height: 150%;
+  word-spacing: .25rem;
+  margin: 0;
+}
+
+.card_skills_title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var( --color-text-dim);
+}
+
+.card_skills_list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+  display:flex;
+  gap: .5rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card_link {
+  color: var( --color-text-dim);
+  text-decoration: underline;
+}

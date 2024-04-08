@@ -1,0 +1,57 @@
+.select_container {
+  --select-width: 3rem;
+  --select-height: 1.5rem;
+  --color-2: var(--color-bg);
+  --color-1: var(--color-text);
+  --color-3: var(--color-active);
+
+  position: relative;
+  container-type: size;
+  height: var(--select-height);
+  min-width: var(--select-width);
+  border: 2px solid var(--color-1);
+  transition: ease-in 0.3s;
+  border-radius: 100em;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: var(--color-2);
+  overflow: hidden;
+}
+
+.select_container:hover {
+  border-color: var(--color-3);
+}
+
+
+.select {
+  appearance: none;
+  background-color: var(--color-2);
+  color: var(--color-1);
+  border: none;
+  padding: 0 1em 0 0.5em;
+  margin: 0;
+  font-family: inherit;
+  font-size: 65cqh;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+  width: 100%;
+  transition: ease-in 0.3s;
+}
+
+.select::-ms-expand {
+  display: none;
+}
+
+.select_container:after {
+  position: absolute;
+  top: calc((var(--select-height) - 0.3em) / 2 - 2px);
+  right: 0.4em;
+  content: '';
+  width: 0.5em;
+  height: 0.3em;
+  background-color: var(--color-1);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  pointer-events: none;
+}

@@ -1,0 +1,130 @@
+.sidetab {
+  position: fixed;
+  right: -1rem;
+  top: 30lvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  transform: translateX(2rem) rotate(-90deg) translateY(0);
+  transform-origin: right bottom;
+  transition: transform 0.3s ease-in;
+}
+
+.sidetab.expanded {
+  transform: translateX(0) rotate(-90deg) translateY(0);
+  animation: none;
+}
+
+.sidetab.expanded.animated {
+  transform: translateX(0) rotate(-90deg) translateY(0);
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 2s 1;
+}
+
+.sidetab.expanded.animated:hover {
+  animation: none;
+}
+
+.actionbtn,
+.actionbtn:focus-visible,
+.opener,
+.opener:focus-visible {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--color-active);
+  color: var(--color-text);
+}
+
+.actionbtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-base);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  height: 3rem;
+  padding: 0 1rem 1rem;
+  cursor: pointer;
+}
+
+.actionbtn:hover,
+.actionbtn:hover::before,
+.actionbtn:hover::after {
+  background-color: var(--color-accent);
+}
+
+.actionbtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-active);
+  z-index: -1;
+  transform: skewX(-10deg);
+  transform-origin: top left;
+}
+
+.actionbtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-active);
+  z-index: -1;
+  /* border-top-right-radius: .5rem; */
+  transform: skewX(10deg);
+  transform-origin: top right;
+}
+
+.opener {
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top-right-radius: 100vw;
+  border-top-left-radius: 100vw;
+  border-bottom: 1px solid var(--color-text-dim);
+  cursor: pointer;
+}
+
+.opener:hover {
+  background-color: var(--color-accent);
+}
+
+.opener svg {
+  transform: rotate(0);
+  transition: transform 0.3s ease-in;
+}
+
+.opener.expanded svg {
+  transform: rotate(180deg);
+}
+
+.opener::after {
+  animation-delay: 0.8s;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateY(0) rotate(-90deg) translateX(-1px);
+  }
+
+  20%,
+  80% {
+    transform: translateY(0) rotate(-90deg) translateX(2px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translateY(0) rotate(-90deg) translateX(-4px);
+  }
+
+  40%,
+  60% {
+    transform: translateY(0) rotate(-90deg) translateX(4px);
+  }
+}

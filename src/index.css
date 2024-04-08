@@ -1,0 +1,105 @@
+@font-face {
+  font-family:'Caveat';
+  src: url('fonts/Caveat-SemiBold.woff2') format('woff2'),
+  url('fonts/Caveat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-052E;
+}
+
+@font-face {
+  font-family:'Montserrat';
+  src: url('fonts/Montserrat-Medium.woff2') format('woff2'),
+  url('fonts/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family:'Montserrat';
+  src: url('fonts/Montserrat-SemiBold.woff2') format('woff2'),
+  url('fonts/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family:'Montserrat';
+  src: url('fonts/Montserrat-Bold.woff2') format('woff2'),
+  url('fonts/Montserrat-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family:'Rubik';
+  src: url('fonts/Rubik-Medium.woff2') format('woff2'),
+  url('fonts/Rubik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2084;
+}
+
+:root {
+  font-family: 'Montserrat', Helvetica, Arial, Inter, system-ui, sans-serif;
+  font-weight: 500;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
+  /* https://coolors.co/palette/03071e-370617-6a040f-9d0208-d00000-dc2f02-e85d04-f48c06-faa307-ffba08 */
+
+  --color-light-extra: #F8F9FA;
+  --color-light-normal: #DEE2E6;
+  --color-light-low: #ADB5BD;
+  --color-dark-low: #6C757D;
+  --color-dark-normal: #343A40;
+  --color-dark-extra: #212529;
+
+  --color-accent-light-extra: #F48C06;
+  --color-accent-light-normal: #E85D04;
+  --color-accent-light-low: #DC2F02;
+  --color-accent-dark-low: #E85D04;
+  --color-accent-dark-normal: #DC2F02;
+  --color-accent-dark-extra: #D00000;
+
+  --color-success: rgb(0, 181, 0);
+  --color-failure: rgb(255, 31, 1);
+
+  --header-height: 3rem;
+  --footer-height: 4.5rem;
+
+  --font-base: 'Montserrat', Helvetica, Arial, Inter, system-ui, sans-serif;
+  --font-header: 'Rubik', 'Montserrat', Helvetica, Arial, Inter, system-ui, sans-serif;
+  --font-handwriting: 'Caveat', 'Montserrat', Helvetica, Arial, Inter, system-ui, sans-serif;
+  
+  min-height: 100dvh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: background-color .3s ease-in;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

@@ -1,0 +1,19 @@
+.navlink {
+  color: var(--color-text);
+  width: fit-content;
+  border-block: solid 2px transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: ease-in 0.3s;
+}
+
+.navlink:hover {
+  color: var(--color-active);
+  transition: ease-in 0.3s;
+}
+
+.active {
+  color: var(--color-active);
+  border-bottom-color: var(--color-active);
+  transition: ease-in 0.3s;
+}

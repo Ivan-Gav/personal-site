@@ -1,0 +1,12 @@
+.contacts_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-top: solid 1px var(--color-text);
+}
+
+.contacts_list.mobile {
+  border-top: none;
+  border-bottom: solid 1px var(--color-text);
+}

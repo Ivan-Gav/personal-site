@@ -1,0 +1,112 @@
+.slide {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  container-type: inline-size;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  opacity: 0;
+  /* transform: translateX(-100%); */
+  transition: opacity .6s ease-in, transform .5s ease-out;
+}
+
+.slide.odd {
+  flex-direction: row-reverse;
+  /* transform: translateX(100%); */
+}
+
+
+.slide.active {
+  /* transform: translateX(0); */
+  opacity: 1;
+}
+
+.slide.mobile {
+  flex-direction: column;
+}
+
+.slide_img_container {
+  perspective: 3000px;
+}
+
+.slide_img_frame {
+  container-type: inline-size;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60cqw;
+  height: min-content;
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  border: solid 2px var(--color-bg-light);
+  background-color: var(--color-bg-shadow);
+  background: var(--gradient-monitor);
+  transform: rotate3d(0, 1, 0, 25deg);
+  transform-origin: 80% center;
+} 
+
+.slide.odd .slide_img_frame {
+  transform: rotate3d(0, 1, 0, -25deg);
+  transform-origin: 20% center;
+}
+
+.slide.mobile .slide_img_frame {
+  width: clamp(300px, 100cqw, 600px);
+  transform: none;
+}
+
+.slide_img {
+  width: 95cqw;
+  border-radius: 4px;
+  overflow: hidden;
+  border: solid 2px var(--color-bg-light);
+}
+
+.slide_text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.slide.mobile .slide_text {
+  padding: 1rem .5rem;
+}
+
+.slide_text > * {
+  margin: 0;
+}
+
+.slide_name {
+  font-family: var(--font-header);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.4rem, 6vw);
+  color: var(--color-active);
+}
+
+.slide_description {
+  line-height: 150%;
+  word-spacing: .25rem;
+}
+
+.slide_stack_title {
+  font-size: 1.2rem;
+  color: var( --color-text-dim);
+}
+
+.slide_stack {
+  padding-inline: 0;
+  list-style: none;
+  display:flex;
+  gap: .5rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.slide_links {
+  border-top: solid 1px var(--color-text-dim);
+  padding-top: 1rem;
+  display: flex;
+  gap: .5rem 1.5rem;
+  flex-wrap: wrap;
+}
