@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import cn from 'classnames';
 import s from './Photo.module.css';
-import photo from 'src/assets/pics/avatar.png';
+import photo from 'src/assets/pics/avatar_v2.png';
 
 export default function Photo() {
   const [loaded, setLoaded] = useState(false);
