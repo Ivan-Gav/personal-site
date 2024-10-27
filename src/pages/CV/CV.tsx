@@ -22,7 +22,7 @@ export default function CV() {
             skills={[
               SKILLS.REACT,
               SKILLS.REDUX,
-              SKILLS.NEXTJS,
+
               SKILLS.MATERIALUI,
               SKILLS.GRAPHQL,
               SKILLS.JAVASCRIPT,
@@ -37,10 +37,52 @@ export default function CV() {
               SKILLS.SCSS,
             ]}
           />
+
           <h3 className={s.cv_title}>{t('EXPERIENCE')}</h3>
           <Card
-            fromDate="2012"
+            fromDate="05.2024"
             toDate={t('PRESENT')}
+            company={t('ACEPLACE')}
+            location={t('MOSCOW')}
+            position={t('FRONTEND_DEVELOPER')}
+            description_key="ACEPLACE_DESCRIPTION"
+            skills={[
+              SKILLS.REACT,
+              SKILLS.REDUX,
+              SKILLS.NEXTJS,
+              SKILLS.JAVASCRIPT,
+              SKILLS.TYPESCRIPT,
+              SKILLS.GIT,
+              SKILLS.GITHUB,
+              SKILLS.WEBPACK,
+              SKILLS.SCSS,
+            ]}
+          />
+          <Card
+            fromDate="01.2024"
+            toDate="05.2024"
+            company={t('FREELANCE')}
+            location={t('MOSCOW')}
+            position={t('FRONTEND_DEVELOPER')}
+            description_key="FREELANCE_DESCRIPTION"
+            skills={[
+              SKILLS.REACT,
+              SKILLS.REDUX,
+              SKILLS.MATERIALUI,
+              SKILLS.TAILWIND,
+              SKILLS.JAVASCRIPT,
+              SKILLS.TYPESCRIPT,
+              SKILLS.GIT,
+              SKILLS.GITHUB,
+              SKILLS.VUE,
+              SKILLS.VITE,
+              SKILLS.HTML,
+              SKILLS.CSS,
+            ]}
+          />
+          <Card
+            fromDate="2012"
+            toDate="05.2024"
             company="fontan-online.ru"
             location={t('MOSCOW')}
             position={t('IP')}
