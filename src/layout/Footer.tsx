@@ -51,6 +51,8 @@ export default function Footer() {
   const { t, i18n } = useTranslation();
   const { device } = useMediaQuery();
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <footer
@@ -79,7 +81,9 @@ export default function Footer() {
             />
           ))}
         </div>
-        <div className={s.copyright}>©2024 {t('IG')}</div>
+        <div
+          className={s.copyright}
+        >{`©2024 - ${currentYear} ${t('IG')} | ${t('LAST_UPDATED')} - 15.02.2025`}</div>
       </footer>
       <div ref={ref} className={s.bottom} />
     </>

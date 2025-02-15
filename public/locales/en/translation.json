@@ -76,5 +76,6 @@
   "ERRMSG_SENT": "Message sent",
   "ERRMSG_FAIL": "Sending error",
   "PAGE_NOT_FOUND": "Page is not found",
-  "RETURN_HOME": "Return to Main page"
+  "RETURN_HOME": "Return to Main page",
+  "LAST_UPDATED": "last updated"
 }
