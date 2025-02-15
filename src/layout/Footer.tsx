@@ -10,24 +10,19 @@ import FooterLink from 'src/components/UI/FooterLink/FooterLink';
 
 const DISCORD_HREF = import.meta.env.VITE_DISCORD_HREF;
 const DISCORD_TEXT = import.meta.env.VITE_DISCORD_TEXT;
-const PHONE_HREF = import.meta.env.VITE_PHONE_HREF;
-const PHONE_TEXT = import.meta.env.VITE_PHONE_TEXT;
 const EMAIL = import.meta.env.VITE_EMAIL;
 const TELEGRAM_HREF = import.meta.env.VITE_TELEGRAM_HREF;
 const TELEGRAM_TEXT = import.meta.env.VITE_TELEGRAM_TEXT;
 const GITHUB_HREF = import.meta.env.VITE_GITHUB_HREF;
 const GITHUB_TEXT = import.meta.env.VITE_GITHUB_TEXT;
+const LINKEDIN_HREF = import.meta.env.VITE_LINKEDIN_HREF;
+const LINKEDIN_TEXT = import.meta.env.VITE_LINKEDIN_TEXT;
 
 const socialLinks: SocialLinkProps[] = [
   {
     skill: 'Discord',
     href: DISCORD_HREF,
     text: DISCORD_TEXT,
-  },
-  {
-    skill: 'Phone',
-    href: PHONE_HREF,
-    text: PHONE_TEXT,
   },
   {
     skill: 'Email',
@@ -40,6 +35,11 @@ const socialLinks: SocialLinkProps[] = [
     text: TELEGRAM_TEXT,
   },
   {
+    skill: 'LinkedIn',
+    href: LINKEDIN_HREF,
+    text: LINKEDIN_TEXT,
+  },
+  {
     skill: 'GitHub',
     href: GITHUB_HREF,
     text: GITHUB_TEXT,
@@ -50,6 +50,8 @@ export default function Footer() {
   const [ref, inView] = useInView();
   const { t, i18n } = useTranslation();
   const { device } = useMediaQuery();
+
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -79,7 +81,9 @@ export default function Footer() {
             />
           ))}
         </div>
-        <div className={s.copyright}>©2024 {t('IG')}</div>
+        <div
+          className={s.copyright}
+        >{`©2024 - ${currentYear} ${t('IG')} | ${t('LAST_UPDATED')} - 15.02.2025`}</div>
       </footer>
       <div ref={ref} className={s.bottom} />
     </>

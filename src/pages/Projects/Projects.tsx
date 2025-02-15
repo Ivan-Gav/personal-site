@@ -13,6 +13,9 @@ import minesweeper from 'src/assets/pics/minesweeper.jpg';
 import asyncrace from 'src/assets/pics/asyncrace.jpg';
 import thissite from 'src/assets/pics/thissite.jpg';
 import vuesneakers from 'src/assets/pics/vuesneakers.jpg';
+import poolgame from 'src/assets/pics/poolgame.jpg';
+import fitnessaction from 'src/assets/pics/fitnessaction.jpg';
+import editabletable from 'src/assets/pics/editabletable.jpg';
 import { SKILLS } from 'src/@types/models';
 
 export default function Projects() {
@@ -28,11 +31,33 @@ export default function Projects() {
       href: 'https://ivan-gav.github.io/vue-sneakers/',
     },
     {
+      name: 'Pool game',
+      img: poolgame,
+      description_key: 'PROJECT_DESCRIPTION_POOLGAME',
+      stack: [
+        SKILLS.REACT,
+        SKILLS.TYPESCRIPT,
+        SKILLS.HTML,
+        SKILLS.CSS,
+        SKILLS.VITE,
+      ],
+      git: 'https://github.com/Ivan-Gav/pool-game',
+      href: 'https://ivan-gav.github.io/pool-game/',
+    },
+    {
       name: 'gavrilin.online',
       img: thissite,
       description_key: 'PROJECT_DESCRIPTION_THISSITE',
       stack: [SKILLS.REACT, SKILLS.TYPESCRIPT, SKILLS.CSS, SKILLS.VITE],
       git: 'https://github.com/Ivan-Gav/personal-site',
+    },
+    {
+      name: 'Editable table',
+      img: editabletable,
+      description_key: 'PROJECT_DESCRIPTION_INTERACTIVETABLE',
+      stack: [SKILLS.VUE, SKILLS.HTML, SKILLS.CSS, SKILLS.VITE],
+      git: 'https://github.com/Ivan-Gav/opt6-test',
+      href: 'https://ivan-gav.github.io/opt6-test/',
     },
     {
       name: 'fontan-online.ru',
@@ -79,6 +104,14 @@ export default function Projects() {
       ],
       git: 'https://github.com/Ivan-Gav/eCommerce-Application',
       href: 'https://e-commerce-application-roan.vercel.app/',
+    },
+    {
+      name: 'Fitness action page',
+      img: fitnessaction,
+      description_key: 'PROJECT_DESCRIPTION_TIMER',
+      stack: [SKILLS.REACT, SKILLS.HTML, SKILLS.CSS, SKILLS.VITE],
+      git: 'https://github.com/Ivan-Gav/4a-consulting-test',
+      href: 'https://ivan-gav.github.io/4a-consulting-test/',
     },
     {
       name: 'CSS Selectors',

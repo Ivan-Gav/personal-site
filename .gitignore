@@ -22,7 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.vite
 
 .env
 
+TODO.md
 public/php

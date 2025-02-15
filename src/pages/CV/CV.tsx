@@ -22,7 +22,7 @@ export default function CV() {
             skills={[
               SKILLS.REACT,
               SKILLS.REDUX,
-              SKILLS.NEXTJS,
+
               SKILLS.MATERIALUI,
               SKILLS.GRAPHQL,
               SKILLS.JAVASCRIPT,
@@ -37,10 +37,52 @@ export default function CV() {
               SKILLS.SCSS,
             ]}
           />
+
           <h3 className={s.cv_title}>{t('EXPERIENCE')}</h3>
           <Card
-            fromDate="2012"
+            fromDate="05.2024"
             toDate={t('PRESENT')}
+            company={t('ACEPLACE')}
+            location={t('MOSCOW')}
+            position={t('FRONTEND_DEVELOPER')}
+            description_key="ACEPLACE_DESCRIPTION"
+            skills={[
+              SKILLS.REACT,
+              SKILLS.REDUX,
+              SKILLS.NEXTJS,
+              SKILLS.JAVASCRIPT,
+              SKILLS.TYPESCRIPT,
+              SKILLS.GIT,
+              SKILLS.GITHUB,
+              SKILLS.WEBPACK,
+              SKILLS.SCSS,
+            ]}
+          />
+          <Card
+            fromDate="01.2024"
+            toDate="05.2024"
+            company={t('FREELANCE')}
+            location={t('MOSCOW')}
+            position={t('FRONTEND_DEVELOPER')}
+            description_key="FREELANCE_DESCRIPTION"
+            skills={[
+              SKILLS.REACT,
+              SKILLS.REDUX,
+              SKILLS.MATERIALUI,
+              SKILLS.TAILWIND,
+              SKILLS.JAVASCRIPT,
+              SKILLS.TYPESCRIPT,
+              SKILLS.GIT,
+              SKILLS.GITHUB,
+              SKILLS.VUE,
+              SKILLS.VITE,
+              SKILLS.HTML,
+              SKILLS.CSS,
+            ]}
+          />
+          <Card
+            fromDate="2012"
+            toDate="05.2024"
             company="fontan-online.ru"
             location={t('MOSCOW')}
             position={t('IP')}
@@ -116,16 +158,16 @@ export default function CV() {
           <h3 className={s.cv_title}>{t('LANGS')}</h3>
           <ul className={s.cv_list}>
             <li>
-              <span>{t('LANGS_EN')}</span> - B1+{' '}
+              <span>{t('LANGS_EN')}</span> - B2+{' '}
               <a
-                href="https://englex.ru/certificate/?hash=ykxkVcEF46mqEBeRuBeycHvmvAhvG5Lc0P74QMIgDkZ9iqKBK6hrR2H0CbFCkhdN"
+                href="https://englex.ru/certificate-check/?hash=ZubWtfXTmd8dOrPPtSlW1ZO6wfL6xKbnCc1e6ntafY2keU50smbX5IaxPJueCvJW"
                 target="blank"
               >
                 [{t('CERTIFICATE')}]
               </a>
             </li>
             <li>
-              <span>{t('LANGS_DE')}</span> - B1
+              <span>{t('LANGS_DE')}</span> - B2
             </li>
             <li>
               <span>{t('LANGS_RU')}</span> - {t('LANGS_NATIVE')}
