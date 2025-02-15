@@ -158,16 +158,16 @@ export default function CV() {
           <h3 className={s.cv_title}>{t('LANGS')}</h3>
           <ul className={s.cv_list}>
             <li>
-              <span>{t('LANGS_EN')}</span> - B1+{' '}
+              <span>{t('LANGS_EN')}</span> - B2+{' '}
               <a
-                href="https://englex.ru/certificate/?hash=ykxkVcEF46mqEBeRuBeycHvmvAhvG5Lc0P74QMIgDkZ9iqKBK6hrR2H0CbFCkhdN"
+                href="https://englex.ru/certificate-check/?hash=ZubWtfXTmd8dOrPPtSlW1ZO6wfL6xKbnCc1e6ntafY2keU50smbX5IaxPJueCvJW"
                 target="blank"
               >
                 [{t('CERTIFICATE')}]
               </a>
             </li>
             <li>
-              <span>{t('LANGS_DE')}</span> - B1
+              <span>{t('LANGS_DE')}</span> - B2
             </li>
             <li>
               <span>{t('LANGS_RU')}</span> - {t('LANGS_NATIVE')}
