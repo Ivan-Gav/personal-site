@@ -27,7 +27,13 @@ export type SkillName =
   | 'LinkedIn'
   | 'Discord'
   | 'Vue'
-  | 'Tailwind';
+  | 'Tailwind'
+  | 'Node.js'
+  | 'NestJS'
+  | 'Jest'
+  | 'TypeORM'
+  | 'WebSocket'
+  | 'Docker';
 
 export const SKILLS: { [key in IconKeysType]: SkillName } = {
   CSS: 'CSS',
@@ -54,4 +60,10 @@ export const SKILLS: { [key in IconKeysType]: SkillName } = {
   DISCORD: 'Discord',
   VUE: 'Vue',
   TAILWIND: 'Tailwind',
+  NODEJS: 'Node.js',
+  NESTJS: 'NestJS',
+  JEST: 'Jest',
+  TYPEORM: 'TypeORM',
+  WEBSOCKET: 'WebSocket',
+  DOCKER: 'Docker',
 };

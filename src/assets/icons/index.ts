@@ -22,6 +22,12 @@ import LINKEDIN from './linkedin.svg?react';
 import DISCORD from './discord.svg?react';
 import VUE from './vue.svg?react';
 import TAILWIND from './tailwind.svg?react';
+import NODEJS from './nodejs.svg?react';
+import NESTJS from './nestjs.svg?react';
+import JEST from './jest.svg?react';
+import TYPEORM from './typeorm.svg?react';
+import WEBSOCKET from './websocket.svg?react';
+import DOCKER from './docker.svg?react';
 
 const icons = {
   CSS,
@@ -48,7 +54,14 @@ const icons = {
   DISCORD,
   VUE,
   TAILWIND,
+  NODEJS,
+  NESTJS,
+  JEST,
+  TYPEORM,
+  WEBSOCKET,
+  DOCKER,
 };
+
 export type IconKeysType = keyof typeof icons;
 
 export default icons;

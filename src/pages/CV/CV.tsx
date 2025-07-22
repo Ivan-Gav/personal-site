@@ -102,6 +102,28 @@ export default function CV() {
         <div className={s.cv_edu}>
           <h3 className={s.cv_title}>{t('EDUCATION')}</h3>
           <Card
+            fromDate="04.2025"
+            toDate="06.2025"
+            company="Rolling Scopes School"
+            position={t('FULLSTACK_DEVELOPER')}
+            description_key="RSS_DESCRIPTION_NODE"
+            skills={[
+              SKILLS.NODEJS,
+              SKILLS.NESTJS,
+              SKILLS.WEBSOCKET,
+              SKILLS.JEST,
+              SKILLS.TYPEORM,
+              SKILLS.GRAPHQL,
+              SKILLS.DOCKER,
+              SKILLS.JAVASCRIPT,
+              SKILLS.TYPESCRIPT,
+            ]}
+            link={{
+              href: 'https://app.rs.school/certificate/qq6oa6al',
+              text: `[${t('CERTIFICATE')}]`,
+            }}
+          />
+          <Card
             fromDate="10.2023"
             toDate="01.2024"
             company="Rolling Scopes School"
