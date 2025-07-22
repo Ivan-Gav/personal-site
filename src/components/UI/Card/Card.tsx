@@ -1,8 +1,9 @@
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import s from './Card.module.css';
 import Skill from '../Skill/Skill';
 import { Dictionary, SkillName } from 'src/@types/models';
+import { TextHTML } from '../TextHTML/TextHTML';
 
 type CardProps = {
   isProfile?: boolean;
@@ -53,9 +54,7 @@ export default function Card(props: CardProps) {
         </h4>
       </div>
       <h4 className={s.card_position}>{position}</h4>
-      <p className={s.card_description}>
-        <Trans i18nKey={description_key} />
-      </p>
+      <TextHTML i18nKey={description_key} className={s.card_description} />
       {!!skills?.length && (
         <>
           <h5 className={s.card_skills_title}>{t('SKILLS')}</h5>

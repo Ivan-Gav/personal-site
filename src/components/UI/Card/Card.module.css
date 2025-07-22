@@ -5,12 +5,12 @@
   border-bottom: solid 2px var(--color-text);
   padding: 1rem;
   padding-bottom: 1.5rem;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .card.profile {
   border-bottom: none;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   background-color: var(--color-bg-light);
   margin-block: 1.5rem;
 }
@@ -21,7 +21,7 @@
 .card_title {
   display: flex;
   align-items: baseline;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .card_company {
@@ -33,8 +33,8 @@
 
 .card_location {
   font-size: 1rem;
-  padding-left: .5rem;
-  color: var( --color-text-dim);
+  padding-left: 0.5rem;
+  color: var(--color-text-dim);
 }
 
 .card_position {
@@ -43,33 +43,50 @@
   margin: 0;
 }
 
-
 .card_dates {
-  font-size: 1.2rem;  
+  font-size: 1.2rem;
 }
 
 .card_description {
   line-height: 150%;
-  word-spacing: .25rem;
+  word-spacing: 0.25rem;
   margin: 0;
+
+  a {
+    text-decoration: solid underline 2px;
+    text-underline-offset: 4px;
+    transition:
+      color 0.2s ease-in,
+      text-decoration-color 0.2s ease-in;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  ul {
+    margin: 0.2rem 0;
+    padding: 0;
+    padding-left: 1.4rem;
+  }
 }
 
 .card_skills_title {
   margin: 0;
   font-size: 1.2rem;
-  color: var( --color-text-dim);
+  color: var(--color-text-dim);
 }
 
 .card_skills_list {
   margin: 0;
   padding-inline: 0;
   list-style: none;
-  display:flex;
-  gap: .5rem 1.5rem;
+  display: flex;
+  gap: 0.5rem 1.5rem;
   flex-wrap: wrap;
 }
 
 .card_link {
-  color: var( --color-text-dim);
+  color: var(--color-text-dim);
   text-decoration: underline;
 }

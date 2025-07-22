@@ -1,4 +1,4 @@
-import { useTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import { useInView } from 'react-intersection-observer';
 import cn from 'classnames';
@@ -6,6 +6,7 @@ import s from './Slide.module.css';
 import Skill from '../Skill/Skill';
 import SourceLink from '../SourceLink/SourceLink';
 import { Dictionary, SkillName } from 'src/@types/models';
+import { TextHTML } from '../TextHTML/TextHTML';
 
 export type SlideProps = {
   odd?: boolean;
@@ -42,9 +43,7 @@ export default function Slide(props: SlideProps) {
       </div>
       <div className={s.slide_text}>
         <h3 className={s.slide_name}>{name}</h3>
-        <p className={s.slide_description}>
-          <Trans i18nKey={description_key} />
-        </p>
+        <TextHTML i18nKey={description_key} className={s.slide_description} />
         {!!stack && !!stack.length && (
           <>
             <h4 className={s.slide_stack_title}>{t('STACK')}</h4>
