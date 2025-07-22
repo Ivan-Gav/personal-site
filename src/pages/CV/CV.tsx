@@ -4,6 +4,7 @@ import cn from 'classnames';
 import s from './CV.module.css';
 import Card from 'src/components/UI/Card/Card';
 import { SKILLS } from 'src/@types/models';
+import { Link } from 'react-router-dom';
 
 export default function CV() {
   const { t } = useTranslation();
@@ -181,15 +182,21 @@ export default function CV() {
           <ul className={s.cv_list}>
             <li>
               <span>{t('LANGS_EN')}</span> - B2+{' '}
-              <a
-                href="https://englex.ru/certificate-check/?hash=ZubWtfXTmd8dOrPPtSlW1ZO6wfL6xKbnCc1e6ntafY2keU50smbX5IaxPJueCvJW"
-                target="blank"
+              <Link
+                to="https://englex.ru/certificate-check/?hash=ZubWtfXTmd8dOrPPtSlW1ZO6wfL6xKbnCc1e6ntafY2keU50smbX5IaxPJueCvJW"
+                target="_blank"
               >
                 [{t('CERTIFICATE')}]
-              </a>
+              </Link>
             </li>
             <li>
-              <span>{t('LANGS_DE')}</span> - B2
+              <span>{t('LANGS_DE')}</span> - B2+{' '}
+              <Link
+                to="../pdf/Ivan-Gavrilin_Goethe-Zertifikat-B2-2025-blurred.pdf"
+                target="_blank"
+              >
+                [{t('CERTIFICATE')}]
+              </Link>
             </li>
             <li>
               <span>{t('LANGS_RU')}</span> - {t('LANGS_NATIVE')}
