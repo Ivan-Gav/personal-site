@@ -1,0 +1,50 @@
+.photo_frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9/10;
+  border-bottom-left-radius: 100vw;
+  border-bottom-right-radius: 100vw;
+  overflow: hidden;
+}
+
+.photo_frame::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100vw 100vw 0 0;
+  border: clamp(4px, 1.4cqw, 10px) solid var(--color-text);
+}
+
+.photo_frame::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 2/1;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  border-bottom-left-radius: 100vw;
+  border-bottom-right-radius: 100vw;
+  border: clamp(4px, 1.4cqw, 10px) solid var(--color-text);
+  border-top: none;
+}
+
+.skeleton {
+  position: absolute;
+}
+
+.photo {
+  position: relative;
+  display: block;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .2s ease-in;
+}
+
+.photo.loaded {
+  opacity: 1;
+}

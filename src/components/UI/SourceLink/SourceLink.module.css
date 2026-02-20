@@ -1,0 +1,21 @@
+.sourcelink {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap:0.2rem;
+}
+
+.sourcelink:hover {
+  color: var(--color-accent);
+}
+
+.sourcelink svg {
+  font-size: 1.4em;
+}
+
+.sourcelink span {
+  text-decoration: solid underline var(--color-accent) 2px;
+  text-underline-offset: 4px;
+}

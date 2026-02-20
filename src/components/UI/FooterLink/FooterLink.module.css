@@ -1,0 +1,12 @@
+.footer_link {
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 700;
+  transition: color .2s ease-in, text-decoration-color .2s ease-in;
+}
+
+.footer_link:hover {
+  color: var(--color-accent);
+  text-decoration: solid underline 2px;
+  text-underline-offset: 4px;
+}

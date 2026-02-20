@@ -1,0 +1,43 @@
+.contact_page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+
+.contact_page.tablet,
+.contact_page.mobile {
+  padding: 1rem 0;
+}
+
+.contact_page.mobile {
+  flex-direction: column;
+}
+
+.contacts_box {
+  padding-inline: 2rem;
+  border-right: solid 1px var(--color-text);
+}
+
+.contact_page.mobile .contacts_box {
+  padding-inline: 1rem;
+  border-right: none;
+}
+
+.form_box {
+  flex-grow: 1;
+  max-width: 850px;
+  padding-inline: 2rem;
+  overflow: hidden;
+}
+
+.contact_page.mobile .form_box {
+  padding-inline: 1rem;
+}
+
+.contacts_title {
+  margin-block: 1rem;
+  font-size: 2.4rem;
+  align-self: flex-start;
+}

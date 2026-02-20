@@ -1,0 +1,55 @@
+.cv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cv_box {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-template-columns: 1;
+  justify-items: center;
+  gap: 2rem;
+  padding-block: 2vw;
+  padding-inline: 15vw;
+}
+
+.cv_box.mobile {
+  padding-inline: 1rem;
+}
+
+.cv_exp,
+.cv_edu {
+  width: fit-content;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cv_title {
+  margin: 0;
+  font-size: 2.4rem;
+  /* width: clamp(300px, 100%); */
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+.cv_list {
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.cv_list li span {
+  color: var(--color-active);
+}
+
+.cv_list li a {
+  opacity: 0.6;
+  text-decoration: underline;
+}
