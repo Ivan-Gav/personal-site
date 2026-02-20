@@ -16,12 +16,22 @@ import vuesneakers from 'src/assets/pics/vuesneakers.jpg';
 import poolgame from 'src/assets/pics/poolgame.jpg';
 import fitnessaction from 'src/assets/pics/fitnessaction.jpg';
 import editabletable from 'src/assets/pics/editabletable.jpg';
+import tracker from 'src/assets/pics/tracker.jpg';
+import tokenadmin from 'src/assets/pics/tokenadmin.jpg';
 import { SKILLS } from 'src/@types/models';
 
 export default function Projects() {
   const { device } = useMediaQuery();
 
   const projects: SlideProps[] = [
+    {
+      name: 'Task tracker',
+      img: tracker,
+      description_key: 'PROJECT_DESCRIPTION_TASKTRACKER',
+      stack: [SKILLS.REACT, SKILLS.REDUX, SKILLS.APPWRITE, SKILLS.VITE],
+      git: 'https://github.com/Ivan-Gav/task-tracker',
+      href: 'https://ivan-gav.github.io/task-tracker',
+    },
     {
       name: 'Vue-sneakers',
       img: vuesneakers,
@@ -50,6 +60,20 @@ export default function Projects() {
       description_key: 'PROJECT_DESCRIPTION_THISSITE',
       stack: [SKILLS.REACT, SKILLS.TYPESCRIPT, SKILLS.CSS, SKILLS.VITE],
       git: 'https://github.com/Ivan-Gav/personal-site',
+    },
+    {
+      name: 'Token admin',
+      img: tokenadmin,
+      description_key: 'PROJECT_DESCRIPTION_TOKENADMIN',
+      stack: [
+        SKILLS.REACT,
+        SKILLS.TANSTACK,
+        SKILLS.TAILWIND,
+        SKILLS.SHADCN,
+        SKILLS.VITE,
+      ],
+      git: 'https://github.com/Ivan-Gav/token-admin-panel',
+      href: 'https://ivan-gav.github.io/token-admin-panel/',
     },
     {
       name: 'Editable table',

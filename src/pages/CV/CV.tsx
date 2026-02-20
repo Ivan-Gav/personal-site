@@ -60,7 +60,7 @@ export default function CV() {
             ]}
           />
           <Card
-            fromDate="01.2024"
+            fromDate="2020"
             toDate="05.2024"
             company={t('FREELANCE')}
             location={t('MOSCOW')}
@@ -181,9 +181,9 @@ export default function CV() {
           <h3 className={s.cv_title}>{t('LANGS')}</h3>
           <ul className={s.cv_list}>
             <li>
-              <span>{t('LANGS_EN')}</span> - B2+{' '}
+              <span>{t('LANGS_EN')}</span> - C1{' '}
               <Link
-                to="https://englex.ru/certificate-check/?hash=ZubWtfXTmd8dOrPPtSlW1ZO6wfL6xKbnCc1e6ntafY2keU50smbX5IaxPJueCvJW"
+                to="../pdf/Ivan-Gavrilin_English-certificate-C1-2026.pdf"
                 target="_blank"
               >
                 [{t('CERTIFICATE')}]

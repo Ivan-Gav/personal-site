@@ -33,7 +33,11 @@ export type SkillName =
   | 'Jest'
   | 'TypeORM'
   | 'WebSocket'
-  | 'Docker';
+  | 'Docker'
+  | 'appwrite'
+  | 'Tanstack'
+  | 'Shadcn'
+  | 'Zustand';
 
 export const SKILLS: { [key in IconKeysType]: SkillName } = {
   CSS: 'CSS',
@@ -66,4 +70,8 @@ export const SKILLS: { [key in IconKeysType]: SkillName } = {
   TYPEORM: 'TypeORM',
   WEBSOCKET: 'WebSocket',
   DOCKER: 'Docker',
+  APPWRITE: 'appwrite',
+  TANSTACK: 'Tanstack',
+  SHADCN: 'Shadcn',
+  ZUSTAND: 'Zustand',
 };

@@ -28,6 +28,10 @@ import JEST from './jest.svg?react';
 import TYPEORM from './typeorm.svg?react';
 import WEBSOCKET from './websocket.svg?react';
 import DOCKER from './docker.svg?react';
+import APPWRITE from './appwrite.svg?react';
+import TANSTACK from './tanstack.svg?react';
+import SHADCN from './shadcn.svg?react';
+import ZUSTAND from './zustand.svg?react';
 
 const icons = {
   CSS,
@@ -60,6 +64,10 @@ const icons = {
   TYPEORM,
   WEBSOCKET,
   DOCKER,
+  APPWRITE,
+  TANSTACK,
+  SHADCN,
+  ZUSTAND,
 };
 
 export type IconKeysType = keyof typeof icons;
