@@ -190,9 +190,9 @@ export default function CV() {
               </Link>
             </li>
             <li>
-              <span>{t('LANGS_DE')}</span> - B2+{' '}
+              <span>{t('LANGS_DE')}</span> - C1{' '}
               <Link
-                to="../pdf/Ivan-Gavrilin_Goethe-Zertifikat-B2-2025-blurred.pdf"
+                to="../pdf/Ivan-Gavrilin_Goethe-Zertifikat-C1-2026_blurred.pdf"
                 target="_blank"
               >
                 [{t('CERTIFICATE')}]
