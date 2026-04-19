@@ -60,7 +60,7 @@ export default function CV() {
             ]}
           />
           <Card
-            fromDate="2020"
+            fromDate="03.2023"
             toDate="05.2024"
             company={t('FREELANCE')}
             location={t('MOSCOW')}
@@ -170,6 +170,15 @@ export default function CV() {
               text: `[${t('CERTIFICATE')}]`,
             }}
           />
+          <Card
+            fromDate="1998"
+            toDate="1999"
+            company={t('FH_KEMPTEN')}
+            location={t('KEMPTEN')}
+            position={t('FH_KEMPTEN_POSITION')}
+            description_key="FH_KEMPTEN_DESCRIPTION"
+          />
+
           <Card
             fromDate="1993"
             toDate="1999"

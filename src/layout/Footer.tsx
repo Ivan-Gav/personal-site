@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
         <div
           className={s.copyright}
-        >{`©2024 - ${currentYear} ${t('IG')} | ${t('LAST_UPDATED')} - 20.02.2026`}</div>
+        >{`©2024 - ${currentYear} ${t('IG')} | ${t('LAST_UPDATED')} - 19.04.2026`}</div>
       </footer>
       <div ref={ref} className={s.bottom} />
     </>
