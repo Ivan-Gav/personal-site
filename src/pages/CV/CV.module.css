@@ -7,7 +7,6 @@
 .cv_box {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-  grid-template-columns: 1;
   justify-items: center;
   gap: 2rem;
   padding-block: 2vw;
