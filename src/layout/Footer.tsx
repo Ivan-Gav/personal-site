@@ -11,8 +11,6 @@ import FooterLink from 'src/components/UI/FooterLink/FooterLink';
 const DISCORD_HREF = import.meta.env.VITE_DISCORD_HREF;
 const DISCORD_TEXT = import.meta.env.VITE_DISCORD_TEXT;
 const EMAIL = import.meta.env.VITE_EMAIL;
-const TELEGRAM_HREF = import.meta.env.VITE_TELEGRAM_HREF;
-const TELEGRAM_TEXT = import.meta.env.VITE_TELEGRAM_TEXT;
 const GITHUB_HREF = import.meta.env.VITE_GITHUB_HREF;
 const GITHUB_TEXT = import.meta.env.VITE_GITHUB_TEXT;
 const LINKEDIN_HREF = import.meta.env.VITE_LINKEDIN_HREF;
@@ -28,11 +26,6 @@ const socialLinks: SocialLinkProps[] = [
     skill: 'Email',
     href: EMAIL,
     text: EMAIL,
-  },
-  {
-    skill: 'Telegram',
-    href: TELEGRAM_HREF,
-    text: TELEGRAM_TEXT,
   },
   {
     skill: 'LinkedIn',
@@ -83,7 +76,7 @@ export default function Footer() {
         </div>
         <div
           className={s.copyright}
-        >{`©2024 - ${currentYear} ${t('IG')} | ${t('LAST_UPDATED')} - 19.04.2026`}</div>
+        >{`©2024 - ${currentYear} ${t('IG')} | ${t('LAST_UPDATED')} - 04.08.2026`}</div>
       </footer>
       <div ref={ref} className={s.bottom} />
     </>
