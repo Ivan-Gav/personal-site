@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link } from 'react-router';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
@@ -13,7 +13,6 @@ import Btn from '../UI/Btn/Btn';
 import Loading from '../UI/Loading/Loading';
 
 export default function ContactForm() {
-  const [active, setActive] = useState(false);
   const { device } = useMediaQuery();
   const { t, i18n } = useTranslation();
   const { register, setValue, reset, handleSubmit, formState } = useForm({
@@ -29,10 +28,6 @@ export default function ContactForm() {
   const { errors, isSubmitting, dirtyFields, isSubmitSuccessful } = formState;
 
   const customIsDirty = Object.keys(dirtyFields).some((key) => key !== 'lang');
-
-  useEffect(() => {
-    setActive(true);
-  }, []);
 
   useEffect(() => {
     setValue('lang', i18n.language);
@@ -82,7 +77,6 @@ export default function ContactForm() {
         action=""
         className={cn(
           s.form,
-          active && s.active,
           device === 'tablet' && s.tablet,
           device === 'mobile' && s.mobile
         )}

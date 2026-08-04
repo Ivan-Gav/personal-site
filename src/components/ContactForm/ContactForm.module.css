@@ -10,8 +10,7 @@
   gap: 2rem 1rem;
   padding-top: 1.7rem;
   border-top: solid 1px var(--color-text);
-  transform: translateX(-110%);
-  transition: transform 0.5s ease-in;
+  animation: 0.5s ease-in slide_in;
 }
 
 .form.tablet,
@@ -28,11 +27,17 @@
 
 .form.mobile {
   border-top: none;
-  transition: none;
+  animation: none;
 }
 
-.form.active {
-  transform: translateX(0);
+@keyframes slide_in {
+  from {
+    transform: translateX(-110%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .cover {

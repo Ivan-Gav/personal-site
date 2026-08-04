@@ -4,7 +4,7 @@ import cn from 'classnames';
 import s from './CV.module.css';
 import Card from 'src/components/UI/Card/Card';
 import { SKILLS } from 'src/@types/models';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 export default function CV() {
   const { t } = useTranslation();

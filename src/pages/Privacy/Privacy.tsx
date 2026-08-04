@@ -7,30 +7,25 @@ const PolicyRU = lazy(() => import('./PolicyRU'));
 const PolicyEN = lazy(() => import('./PolicyEN'));
 const PolicyDE = lazy(() => import('./PolicyDE'));
 
+function renderPolicy(language: string) {
+  switch (language) {
+    case 'ru':
+      return <PolicyRU />;
+
+    case 'de':
+      return <PolicyDE />;
+
+    default:
+      return <PolicyEN />;
+  }
+}
+
 export default function Privacy() {
   const { i18n } = useTranslation();
 
-  const Policy = () => {
-    switch (i18n.language) {
-      case 'ru':
-        return <PolicyRU />;
-
-      case 'en':
-        return <PolicyEN />;
-
-      case 'de':
-        return <PolicyDE />;
-
-      default:
-        return <PolicyEN />;
-    }
-  };
-
   return (
     <main className={s.privacy_container}>
-      <Suspense fallback={<Fallback />}>
-        <Policy />
-      </Suspense>
+      <Suspense fallback={<Fallback />}>{renderPolicy(i18n.language)}</Suspense>
     </main>
   );
 }

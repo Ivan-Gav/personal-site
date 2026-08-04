@@ -1,6 +1,6 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import useLocalStorage from 'use-local-storage';
+import useLocalStorage from 'src/hooks/useLocalStorage';
 import 'src/i18n/i18n';
 import './App.css';
 import { ThemeProvider } from './context/ThemeContext';
@@ -11,7 +11,9 @@ function App() {
   const defaultTheme = window.matchMedia('(prefers-color-scheme: dark').matches;
   const [dark, setDark] = useLocalStorage<boolean>('isDark', defaultTheme);
 
-  document.body.style.scrollbarGutter = 'stable';
+  useEffect(() => {
+    document.body.style.scrollbarGutter = 'stable';
+  }, []);
 
   return (
     <ErrorBoundary fallback={<h1>Something went wrong</h1>}>
