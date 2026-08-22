@@ -44,7 +44,7 @@ export default function CV() {
             fromDate="05.2024"
             toDate={t('PRESENT')}
             company={t('ACEPLACE')}
-            location={t('MOSCOW')}
+            location={t('MOSCOW_REMOTE')}
             position={t('FRONTEND_DEVELOPER')}
             description_key="ACEPLACE_DESCRIPTION"
             skills={[
@@ -82,7 +82,7 @@ export default function CV() {
             ]}
           />
           <Card
-            fromDate="2012"
+            fromDate="01.2013"
             toDate="05.2024"
             company="fontan-online.ru"
             location={t('MOSCOW')}
@@ -91,8 +91,17 @@ export default function CV() {
             skills={[SKILLS.HTML, SKILLS.CSS, SKILLS.OPENCART]}
           />
           <Card
+            fromDate="01.2009"
+            toDate="01.2013"
+            company={t('HYDRO')}
+            location={t('MOSCOW')}
+            position={t('HYDRO_POSITION')}
+            description_key="HYDRO_DESCRIPTION"
+            skills={[SKILLS.HTML, SKILLS.CSS]}
+          />
+          <Card
             fromDate="2000"
-            toDate="2012"
+            toDate="2008"
             company={t('OSKO')}
             location={t('MOSCOW')}
             position={t('OSKO_POSITION')}

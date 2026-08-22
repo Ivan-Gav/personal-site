@@ -16,6 +16,13 @@ const GITHUB_TEXT = import.meta.env.VITE_GITHUB_TEXT;
 const LINKEDIN_HREF = import.meta.env.VITE_LINKEDIN_HREF;
 const LINKEDIN_TEXT = import.meta.env.VITE_LINKEDIN_TEXT;
 
+const lastUpdatedDate = new Date(__LAST_UPDATED__);
+const LAST_UPDATED_TEXT = [
+  String(lastUpdatedDate.getDate()).padStart(2, '0'),
+  String(lastUpdatedDate.getMonth() + 1).padStart(2, '0'),
+  lastUpdatedDate.getFullYear(),
+].join('.');
+
 const socialLinks: SocialLinkProps[] = [
   {
     skill: 'Discord',
@@ -76,7 +83,7 @@ export default function Footer() {
         </div>
         <div
           className={s.copyright}
-        >{`©2024 - ${currentYear} ${t('IG')} | ${t('LAST_UPDATED')} - 04.08.2026`}</div>
+        >{`©2024 - ${currentYear} ${t('IG')} | ${t('LAST_UPDATED')} - ${LAST_UPDATED_TEXT}`}</div>
       </footer>
       <div ref={ref} className={s.bottom} />
     </>
