@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import cn from 'classnames';
 import s from './Hero.module.css';
 import Btn from 'src/components/UI/Btn/Btn';

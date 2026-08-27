@@ -8,8 +8,6 @@ import s from './Contacts.module.css';
 const DISCORD_HREF = import.meta.env.VITE_DISCORD_HREF;
 const DISCORD_TEXT = import.meta.env.VITE_DISCORD_TEXT;
 const EMAIL = import.meta.env.VITE_EMAIL;
-const TELEGRAM_HREF = import.meta.env.VITE_TELEGRAM_HREF;
-const TELEGRAM_TEXT = import.meta.env.VITE_TELEGRAM_TEXT;
 const LINKEDIN_HREF = import.meta.env.VITE_LINKEDIN_HREF;
 const LINKEDIN_TEXT = import.meta.env.VITE_LINKEDIN_TEXT;
 
@@ -23,11 +21,6 @@ const contactLinks: SocialLinkProps[] = [
     skill: 'LinkedIn',
     href: LINKEDIN_HREF,
     text: LINKEDIN_TEXT,
-  },
-  {
-    skill: 'Telegram',
-    href: TELEGRAM_HREF,
-    text: TELEGRAM_TEXT,
   },
   {
     skill: 'Discord',

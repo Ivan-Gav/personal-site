@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router';
 
 import s from './RootLayout.module.css';
 import Header from './Header';

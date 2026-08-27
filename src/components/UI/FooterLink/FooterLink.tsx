@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import s from './FooterLink.module.css';
 
 type FooterLinkProps = {

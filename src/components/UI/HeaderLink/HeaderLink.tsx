@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router';
 import classNames from 'classnames';
 import s from './HeaderLink.module.css';
 

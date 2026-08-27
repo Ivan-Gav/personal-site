@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link } from 'react-router';
 import { useMediaQuery } from '@react-hooks-hub/use-media-query';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
@@ -13,7 +13,6 @@ import Btn from '../UI/Btn/Btn';
 import Loading from '../UI/Loading/Loading';
 
 export default function ContactForm() {
-  const [active, setActive] = useState(false);
   const { device } = useMediaQuery();
   const { t, i18n } = useTranslation();
   const { register, setValue, reset, handleSubmit, formState } = useForm({
@@ -23,16 +22,15 @@ export default function ContactForm() {
       message: '',
       privacy: false,
       lang: '',
+      company: '',
     },
   });
 
   const { errors, isSubmitting, dirtyFields, isSubmitSuccessful } = formState;
 
-  const customIsDirty = Object.keys(dirtyFields).some((key) => key !== 'lang');
-
-  useEffect(() => {
-    setActive(true);
-  }, []);
+  const customIsDirty = Object.keys(dirtyFields).some(
+    (key) => key !== 'lang' && key !== 'company'
+  );
 
   useEffect(() => {
     setValue('lang', i18n.language);
@@ -52,7 +50,7 @@ export default function ContactForm() {
     Object.entries(data).forEach(([key, value]) => {
       formData.append(key, value.toString());
     });
-    const response = await fetch('php/mailer.php', {
+    const response = await fetch('/api/mail', {
       method: 'POST',
       body: formData,
     });
@@ -82,7 +80,6 @@ export default function ContactForm() {
         action=""
         className={cn(
           s.form,
-          active && s.active,
           device === 'tablet' && s.tablet,
           device === 'mobile' && s.mobile
         )}
@@ -178,6 +175,16 @@ export default function ContactForm() {
         </div>
 
         <input {...register('lang')} id="lang" type="hidden" />
+
+        <input
+          {...register('company')}
+          id="company"
+          type="text"
+          className={s.aux_field}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
 
         <div className={s.btn_box} id="submit">
           <Btn type="submit" disabled={!customIsDirty || isSubmitting}>

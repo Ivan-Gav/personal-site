@@ -4,7 +4,7 @@ import cn from 'classnames';
 import s from './CV.module.css';
 import Card from 'src/components/UI/Card/Card';
 import { SKILLS } from 'src/@types/models';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 export default function CV() {
   const { t } = useTranslation();
@@ -44,7 +44,7 @@ export default function CV() {
             fromDate="05.2024"
             toDate={t('PRESENT')}
             company={t('ACEPLACE')}
-            location={t('MOSCOW')}
+            location={t('MOSCOW_REMOTE')}
             position={t('FRONTEND_DEVELOPER')}
             description_key="ACEPLACE_DESCRIPTION"
             skills={[
@@ -60,7 +60,7 @@ export default function CV() {
             ]}
           />
           <Card
-            fromDate="2020"
+            fromDate="03.2023"
             toDate="05.2024"
             company={t('FREELANCE')}
             location={t('MOSCOW')}
@@ -82,7 +82,7 @@ export default function CV() {
             ]}
           />
           <Card
-            fromDate="2012"
+            fromDate="01.2013"
             toDate="05.2024"
             company="fontan-online.ru"
             location={t('MOSCOW')}
@@ -91,8 +91,17 @@ export default function CV() {
             skills={[SKILLS.HTML, SKILLS.CSS, SKILLS.OPENCART]}
           />
           <Card
+            fromDate="01.2009"
+            toDate="01.2013"
+            company={t('HYDRO')}
+            location={t('MOSCOW')}
+            position={t('HYDRO_POSITION')}
+            description_key="HYDRO_DESCRIPTION"
+            skills={[SKILLS.HTML, SKILLS.CSS]}
+          />
+          <Card
             fromDate="2000"
-            toDate="2012"
+            toDate="2008"
             company={t('OSKO')}
             location={t('MOSCOW')}
             position={t('OSKO_POSITION')}
@@ -171,6 +180,15 @@ export default function CV() {
             }}
           />
           <Card
+            fromDate="1998"
+            toDate="1999"
+            company={t('FH_KEMPTEN')}
+            location={t('KEMPTEN')}
+            position={t('FH_KEMPTEN_POSITION')}
+            description_key="FH_KEMPTEN_DESCRIPTION"
+          />
+
+          <Card
             fromDate="1993"
             toDate="1999"
             company={t('MPEI')}
@@ -190,9 +208,9 @@ export default function CV() {
               </Link>
             </li>
             <li>
-              <span>{t('LANGS_DE')}</span> - B2+{' '}
+              <span>{t('LANGS_DE')}</span> - C1{' '}
               <Link
-                to="../pdf/Ivan-Gavrilin_Goethe-Zertifikat-B2-2025-blurred.pdf"
+                to="../pdf/Ivan-Gavrilin_Goethe-Zertifikat-C1-2026_blurred.pdf"
                 target="_blank"
               >
                 [{t('CERTIFICATE')}]

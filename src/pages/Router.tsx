@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 import RootLayout from 'src/layout/RootLayout';
 
 const Page404 = lazy(() => import('./404/404'));
