@@ -25,6 +25,9 @@ dist-ssr
 .vite
 
 .env
+.dev.vars
+.wrangler
 
 TODO.md
+MAILER.local.md
 public/php

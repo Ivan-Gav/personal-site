@@ -22,12 +22,15 @@ export default function ContactForm() {
       message: '',
       privacy: false,
       lang: '',
+      company: '',
     },
   });
 
   const { errors, isSubmitting, dirtyFields, isSubmitSuccessful } = formState;
 
-  const customIsDirty = Object.keys(dirtyFields).some((key) => key !== 'lang');
+  const customIsDirty = Object.keys(dirtyFields).some(
+    (key) => key !== 'lang' && key !== 'company'
+  );
 
   useEffect(() => {
     setValue('lang', i18n.language);
@@ -47,7 +50,7 @@ export default function ContactForm() {
     Object.entries(data).forEach(([key, value]) => {
       formData.append(key, value.toString());
     });
-    const response = await fetch('php/mailer.php', {
+    const response = await fetch('/api/mail', {
       method: 'POST',
       body: formData,
     });
@@ -172,6 +175,16 @@ export default function ContactForm() {
         </div>
 
         <input {...register('lang')} id="lang" type="hidden" />
+
+        <input
+          {...register('company')}
+          id="company"
+          type="text"
+          className={s.aux_field}
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+        />
 
         <div className={s.btn_box} id="submit">
           <Btn type="submit" disabled={!customIsDirty || isSubmitting}>

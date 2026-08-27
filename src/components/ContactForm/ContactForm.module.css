@@ -219,3 +219,15 @@ div:has(.input:focus-visible) {
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
+
+.aux_field {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: none;
+  opacity: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  pointer-events: none;
+}
