@@ -48,3 +48,7 @@
 .photo.loaded {
   opacity: 1;
 }
+
+.picture {
+  display: contents;
+}

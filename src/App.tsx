@@ -6,6 +6,7 @@ import './App.css';
 import { ThemeProvider } from './context/ThemeContext';
 import Router from './pages/Router';
 import Fallback from './components/Fallback/Fallback';
+import BootGate from './components/BootGate/BootGate';
 
 function App() {
   const defaultTheme = window.matchMedia('(prefers-color-scheme: dark').matches;
@@ -18,6 +19,7 @@ function App() {
   return (
     <ErrorBoundary fallback={<h1>Something went wrong</h1>}>
       <Suspense fallback={<Fallback />}>
+        <BootGate />
         <ThemeProvider value={{ dark, setDark }}>
           <div id={dark ? 'dark' : 'light'} className="app_container">
             <Router />
