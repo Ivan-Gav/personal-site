@@ -1,19 +1,144 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/fav.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Gavrilin personal site</title>
+    <link
+      rel="preload"
+      href="/pics/avatar_v2.avif"
+      as="image"
+      type="image/avif"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Montserrat-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <style>
+      :root {
+        --boot-bg: #dee2e6;
+        --boot-dot: #e85d04;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/fav.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ivan Gavrilin personal site</title>
-  <link rel="preload" href="/pics/avatar_v2.avif" as="image" type="image/avif" fetchpriority="high" />
-  <link rel="preload" href="/fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin />
-</head>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --boot-bg: #343a40;
+          --boot-dot: #dc2f02;
+        }
+      }
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+      :root[data-boot-theme='light'] {
+        --boot-bg: #dee2e6;
+        --boot-dot: #e85d04;
+      }
 
+      :root[data-boot-theme='dark'] {
+        --boot-bg: #343a40;
+        --boot-dot: #dc2f02;
+      }
+
+      html,
+      body {
+        margin: 0;
+        background-color: var(--boot-bg);
+      }
+
+      #boot {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--boot-bg);
+        transition: opacity 0.25s ease;
+      }
+
+      #boot[data-done] {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #boot::before {
+        content: '';
+        width: 60px;
+        aspect-ratio: 4;
+        --g: no-repeat
+          radial-gradient(circle closest-side, var(--boot-dot) 90%, #0000);
+        background:
+          var(--g) 0% 50%,
+          var(--g) 50% 50%,
+          var(--g) 100% 50%;
+        background-size: calc(100% / 3) 100%;
+        animation: boot_dots 1.5s infinite linear;
+      }
+
+      @keyframes boot_dots {
+        33% {
+          background-size:
+            calc(100% / 3) 0%,
+            calc(100% / 3) 100%,
+            calc(100% / 3) 100%;
+        }
+        50% {
+          background-size:
+            calc(100% / 3) 100%,
+            calc(100% / 3) 0%,
+            calc(100% / 3) 100%;
+        }
+        66% {
+          background-size:
+            calc(100% / 3) 100%,
+            calc(100% / 3) 100%,
+            calc(100% / 3) 0%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #boot::before {
+          animation: none;
+        }
+        #boot {
+          transition: none;
+        }
+      }
+    </style>
+    <script>
+      try {
+        var stored = localStorage.getItem('isDark');
+        if (stored !== null) {
+          document.documentElement.dataset.bootTheme = JSON.parse(stored)
+            ? 'dark'
+            : 'light';
+        }
+      } catch (e) {
+        /* приватный режим — остаётся системная тема */
+      }
+    </script>
+  </head>
+
+  <body>
+    <noscript>
+      <style>
+        #boot {
+          display: none;
+        }
+      </style>
+    </noscript>
+    <div id="boot"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
