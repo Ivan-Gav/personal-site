@@ -42,7 +42,7 @@ export default function CV() {
           <h3 className={s.cv_title}>{t('EXPERIENCE')}</h3>
           <Card
             fromDate="05.2024"
-            toDate={t('PRESENT')}
+            toDate="08.2026"
             company={t('ACEPLACE')}
             location={t('MOSCOW_REMOTE')}
             position={t('FRONTEND_DEVELOPER')}
